@@ -1,5 +1,5 @@
 import React from 'react';
-import Blogrightsidebar from './Blogrightsidebar';
+import BlogRightSidebar from './BlogRightSidebar';
 import BlogGridItem from './BlogGridItem';
 import ServiceData from '../Service/ServiceData';
 const BlogGrid =()=>{
@@ -33,7 +33,7 @@ const BlogGrid =()=>{
                         </ul>
                     </div>
                     <div className="col-lg-4">
-                        <Blogrightsidebar ServiceData={ServiceData}/>
+                        <BlogRightSidebar ServiceData={ServiceData}/>
                     </div>
                 </div>
             </div>

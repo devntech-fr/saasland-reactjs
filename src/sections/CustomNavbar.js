@@ -66,7 +66,7 @@ class CustomNavbar extends Component {
                                                             <span className="rebon_tap">New</span>
                                                             <img src={require('../img/mega-menu-img/home-event.jpg')} alt="Event"/>
                                                         </span>
-                                                        <span className="text">   
+                                                        <span className="text">
                                                             Home Event
                                                         </span>
                                                     </NavLink>
@@ -77,7 +77,7 @@ class CustomNavbar extends Component {
                                                             <span className="rebon_tap">New</span>
                                                             <img src={require('../img/mega-menu-img/home12.jpg')} alt="cloud"/>
                                                         </span>
-                                                        <span className="text">   
+                                                        <span className="text">
                                                             Cloud Based Saas
                                                         </span>
                                                     </NavLink>
@@ -197,7 +197,7 @@ class CustomNavbar extends Component {
                                         </ul>
                                     </div>
                                 </li>
-                                
+
                                 <li className="dropdown submenu nav-item">
                                     <Link to="./" title="Pages" className="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service</Link>
                                     <ul role="menu" className=" dropdown-menu">
@@ -230,14 +230,14 @@ class CustomNavbar extends Component {
                                         Blog
                                     </a>
                                     <ul className="dropdown-menu">
-                                        <li className="nav-item"><NavLink to="/Bloglist" className="nav-link">Blog List</NavLink></li>
+                                        <li className="nav-item"><NavLink to="/BlogListPage" className="nav-link">Blog List</NavLink></li>
                                         <li className="nav-item"><NavLink to="/BlogGridPage" className="nav-link">Blog Grid</NavLink></li>
-                                        <li className="nav-item"><NavLink to="/BlogSingle" className="nav-link">Blog Single</NavLink></li>
+                                        <li className="nav-item"><NavLink to="/BlogSinglePage" className="nav-link">Blog Single</NavLink></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item"><NavLink title="Pricing" className="nav-link" to="/Contact">Contact</NavLink></li>
                             </ul>
-                            <a className={`btn_get btn_hover ${hbtnClass}`} href="#get-app">Get Started</a>
+                            <a className={`btn_get btn_hover ${hbtnClass}`} href="/sample-pages">Samples</a>
                         </div>
                     </div>
                 </nav>

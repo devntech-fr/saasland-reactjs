@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Blogrightsidebar extends Component{
+class BlogRightSidebar extends Component{
     render(){
         let ServiceData = this.props.ServiceData;
         return(
@@ -71,4 +71,4 @@ class Blogrightsidebar extends Component{
         )
     }
 }
-export default Blogrightsidebar;
+export default BlogRightSidebar;

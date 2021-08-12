@@ -11,20 +11,24 @@ class AgencyBanner extends Component {
                         <div className="col-lg-5 d-flex align-items-center">
                             <div className="agency_content">
                             <Reveal effect="fadeInUp">
-                                {
-                                    BannerData.AgencyText.map(Agency =>{
-                                        return(
-                                            <React.Fragment key={Agency.id}>
-                                                <h2 className="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">{Agency.btitle}</h2>
-                                                <p className="f_400 l_height28 wow fadeInLeft" data-wow-delay="0.4s">{Agency.description}</p>
-                                            </React.Fragment>
-                                        )
-                                    })
-                                }
+                                {/*{*/}
+                                {/*    BannerData.AgencyText.map(Agency =>{*/}
+                                {/*        return(*/}
+                                {/*            <React.Fragment key={Agency.id}>*/}
+                                {/*                <h2 className="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">{Agency.btitle}</h2>*/}
+                                {/*                <p className="f_400 l_height28 wow fadeInLeft" data-wow-delay="0.4s">{Agency.description}</p>*/}
+                                {/*            </React.Fragment>*/}
+                                {/*        )*/}
+                                {/*    })*/}
+                                {/*}*/}
+                                <React.Fragment>
+                                    <h2 className="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">Agency banner title</h2>
+                                    <p className="f_400 l_height28 wow fadeInLeft" data-wow-delay="0.4s">Agency banner description</p>
+                                </React.Fragment>
                                 <div className="action_btn d-flex align-items-center mt_60">
-                                    <a href="/#" className="btn_hover agency_banner_btn wow fadeInLeft" data-wow-delay="0.5s">Get in Touch</a>
-                                    <a href="/#" className="agency_banner_btn_two wow fadeInLeft" data-wow-delay="0.7s">Google Sing Up</a>
-                                </div>
+                                        <a href="/#" className="btn_hover agency_banner_btn wow fadeInLeft" data-wow-delay="0.5s">Get in Touch</a>
+                                        <a href="/#" className="agency_banner_btn_two wow fadeInLeft" data-wow-delay="0.7s">Google Sign Up</a>
+                                    </div>
                                 </Reveal>
                             </div>
                         </div>
@@ -33,17 +37,42 @@ class AgencyBanner extends Component {
                         </div>
                     </div>
                     <div className="partner_logo">
-                        {
-                            BannerData.ClientsLogo.map(item =>{
-                                return(
-                                    <Reveal key={item.id} effect="fadeInLeft" duration={1500}>
-                                        <div className="p_logo_item">
-                                            <a href="/#"><img src={require("../../img/home3/" + item.image)} alt=""/></a>
-                                        </div>
-                                    </Reveal>
-                                )
-                            })
-                        }
+                        {/*{*/}
+                        {/*    BannerData.ClientsLogo.map(item =>{*/}
+                        {/*        return(*/}
+                        {/*            <Reveal key={item.id} effect="fadeInLeft" duration={1500}>*/}
+                        {/*                <div className="p_logo_item">*/}
+                        {/*                    <a href="/#"><img src={require("../../img/home3/logo_01.png")} alt=""/></a>*/}
+                        {/*                </div>*/}
+                        {/*            </Reveal>*/}
+                        {/*        )*/}
+                        {/*    })*/}
+                        {/*}*/}
+                        <Reveal effect="fadeInLeft" duration={1500}>
+                            <div className="p_logo_item">
+                                <a href="/#"><img src={require("../../img/home3/logo_01.png")} alt=""/></a>
+                            </div>
+                        </Reveal>
+                        <Reveal effect="fadeInLeft" duration={1500}>
+                            <div className="p_logo_item">
+                                <a href="/#"><img src={require("../../img/home3/logo_02.png")} alt=""/></a>
+                            </div>
+                        </Reveal>
+                        <Reveal effect="fadeInLeft" duration={1500}>
+                            <div className="p_logo_item">
+                                <a href="/#"><img src={require("../../img/home3/logo_03.png")} alt=""/></a>
+                            </div>
+                        </Reveal>
+                        <Reveal effect="fadeInLeft" duration={1500}>
+                            <div className="p_logo_item">
+                                <a href="/#"><img src={require("../../img/home3/logo_04.png")} alt=""/></a>
+                            </div>
+                        </Reveal>
+                        <Reveal effect="fadeInLeft" duration={1500}>
+                            <div className="p_logo_item">
+                                <a href="/#"><img src={require("../../img/home3/logo_05.png")} alt=""/></a>
+                            </div>
+                        </Reveal>
                     </div>
                 </div>
             </section>

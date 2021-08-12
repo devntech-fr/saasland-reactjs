@@ -1,7 +1,7 @@
 import React from 'react';
-import Blogrightsidebar from './Blogrightsidebar';
+import BlogRightSidebar from './BlogRightSidebar';
 import ServiceData from '../Service/ServiceData';
-const Bloglists =()=>{
+const BlogSingle =()=>{
     return(
         <section className="blog_area sec_pad">
             <div className="container">
@@ -163,11 +163,11 @@ const Bloglists =()=>{
                         </form>
                     </div>
                     <div className="col-lg-4">
-                        <Blogrightsidebar ServiceData={ServiceData}/>
+                        <BlogRightSidebar ServiceData={ServiceData}/>
                     </div>
                 </div>
             </div>
         </section>
     )
 }
-export default Bloglists;
+export default BlogSingle;

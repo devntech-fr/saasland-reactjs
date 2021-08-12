@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-class Bloglistitem extends Component{
+class BlogListItem extends Component{
     render(){
         let ServiceData = this.props.ServiceData;
         return(
@@ -32,4 +32,4 @@ class Bloglistitem extends Component{
         )
     }
 }
-export default Bloglistitem;
+export default BlogListItem;
