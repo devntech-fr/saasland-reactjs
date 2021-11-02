@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Slider from 'react-slick';
-import Sectitle from '../Title/Sectitle';
+import SectionTitle from "sections/Title/SectionTitle";
+import ErpTestimonialItem from "components/Testimonial/ErpTestimonialItem";
+
 class ErpTestimonial extends Component {
     constructor(){
         super();
@@ -34,8 +36,8 @@ class ErpTestimonial extends Component {
                 }
             ]
         }
-
     }
+
     next() {
     this.slider.slickNext();
     }
@@ -72,7 +74,7 @@ class ErpTestimonial extends Component {
         return(
             <section className="erp_testimonial_area sec_pad">
                 <div className="container">
-                    <Sectitle sClass="hosting_title erp_title text-center" Title="What our customers say about SaasLand ERP"/>
+                    <SectionTitle sClass="hosting_title erp_title text-center" Title="What our customers say about SaasLand ERP"/>
                     <div className="row">
                         <div className="slider_nav">
                             <i className="arrow_left prev" onClick={this.previous}></i>
@@ -81,25 +83,26 @@ class ErpTestimonial extends Component {
                         <Slider ref={c => (this.slider = c)} className="erp_testimonial_info" {...settings}>
                             {this.state.items.map(item =>(
                                 <div className="item" key={item.id}>
-                                    <div className="erp_testimonial_item">
-                                        <div className="content">
-                                            <p>{item.description}</p>
-                                            <div className="ratting">
-                                                <a href="/#"><i className="icon_star"></i></a>
-                                                <a href="/#"><i className="icon_star"></i></a>
-                                                <a href="/#"><i className="icon_star"></i></a>
-                                                <a href="/#"><i className="icon_star"></i></a>
-                                                <a href="/#"><i className="icon_star"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="media">
-                                            <img src={require ("../../img/erp-home/" + item.image)} alt=""/>
-                                            <div className="media-body">
-                                                <h5>{item.name}<span>{item.postion}</span></h5>
-                                                <p>{item.location}</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <ErpTestimonialItem testimonial={item} />
+                                    {/*<div className="erp_testimonial_item">*/}
+                                    {/*    <div className="content">*/}
+                                    {/*        <p>{item.description}</p>*/}
+                                    {/*        <div className="ratting">*/}
+                                    {/*            <a href="/#"><i className="icon_star"></i></a>*/}
+                                    {/*            <a href="/#"><i className="icon_star"></i></a>*/}
+                                    {/*            <a href="/#"><i className="icon_star"></i></a>*/}
+                                    {/*            <a href="/#"><i className="icon_star"></i></a>*/}
+                                    {/*            <a href="/#"><i className="icon_star"></i></a>*/}
+                                    {/*        </div>*/}
+                                    {/*    </div>*/}
+                                    {/*    <div className="media">*/}
+                                    {/*        <img src={"/img/erp-home/" + item.image} alt=""/>*/}
+                                    {/*        <div className="media-body">*/}
+                                    {/*            <h5>{item.name}<span>{item.postion}</span></h5>*/}
+                                    {/*            <p>{item.location}</p>*/}
+                                    {/*        </div>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
                                 </div>
                             ))}
                         </Slider>

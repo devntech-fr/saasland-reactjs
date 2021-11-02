@@ -1,12 +1,12 @@
 import React from "react";
-import Portfolio2grid from "../sections/Portfolios/Portfolio2grid";
-import Portfolio3grid from "../sections/Portfolios/Portfolio3grid";
+import Portfolio2Grid from "sections/Portfolio/Portfolio2Grid";
+import Portfolio3Grid from "sections/Portfolio/Portfolio3Grid";
 
 function PortfolioGridSample() {
     return (
         <div className="body_wrapper">
-            <Portfolio2grid/>
-            <Portfolio3grid/>
+            <Portfolio2Grid/>
+            <Portfolio3Grid/>
         </div>
     )
 }

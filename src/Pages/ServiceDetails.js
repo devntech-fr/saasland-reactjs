@@ -1,9 +1,9 @@
 import React from 'react';
-import CustomNavbar from '../sections/CustomNavbar';
-import Breadcrumb from '../sections/Breadcrumb';
-import ServiceDetails from '../sections/Service/ServiceDetails';
-import FooterTwo from '../sections/Footer/FooterTwo';
-import FooterData from '../sections/Footer/FooterData';
+import CustomNavbar from 'components/Navbar/CustomNavbar';
+import Breadcrumb from 'sections/Breadcrumb/Breadcrumb';
+import ServiceDetails from 'sections/Service/ServiceDetails';
+import FooterTwo from 'sections/Footer/FooterTwo';
+import FooterData from 'sections/Footer/FooterData';
 
 const Faq = () => {
     return(

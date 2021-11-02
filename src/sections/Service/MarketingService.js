@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Stserviceitems from './Sservice/StserviceItem';
+import StartupServiceItem from './Sservice/StartupServiceItem';
 import Reveal from 'react-reveal/Reveal';
 class MarketingService extends Component{
     render(){
@@ -14,7 +14,7 @@ class MarketingService extends Component{
                                 return(
                                     <Reveal effect="fadeInUp" key={items.id}>
                                         <div className="col-lg-3 col-sm-6">
-                                            <Stserviceitems iShap={items.shape}  Sicon={items.icon} text={items.text} description={items.description} btn={items.btn} bicon={items.bicon}/>
+                                            <StartupServiceItem iShap={items.shape}  Sicon={items.icon} text={items.text} description={items.description} btn={items.btn} bicon={items.bicon}/>
                                         </div>
                                     </Reveal>
                                 )

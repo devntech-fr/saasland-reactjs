@@ -1,7 +1,7 @@
 import React from "react";
-import AppTeam from "../sections/Team/AppTeam";
-import EventTeam from "../sections/Team/EventTeam";
-import Team from "../sections/Team/Team";
+import AppTeam from "sections/Team/AppTeam";
+import EventTeam from "sections/Team/EventTeam";
+import Team from "sections/Team/Teams";
 
 function TeamSectionsSample() {
     return (

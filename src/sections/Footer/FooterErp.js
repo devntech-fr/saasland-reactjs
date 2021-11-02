@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Reveal from 'react-reveal/Reveal';
 import {Link} from 'react-router-dom';
+import AboutWidget from "components/Footer/AboutWidget";
 
 class FooterErp extends Component {
     render(){
@@ -38,18 +39,11 @@ class FooterErp extends Component {
                                 return(
                                     <Reveal effect="fadeInLeft" duration={500} key={widget.id}>
                                     <div className="col-lg-3 col-sm-6">
-                                        <div className="f_widget dark_widget about-widget pl_70">
-                                            <h3 className="f-title f_500 t_color f_size_18 mb_40">{widget.title}</h3>
-                                            <ul className="list-unstyled f_list">
-                                                {
-                                                    widget.menuItems.map(item =>{
-                                                        return(
-                                                            <li key={item.id}><Link to="/">{item.text}</Link></li>
-                                                        )
-                                                    })
-                                                }
-                                            </ul>
-                                        </div>
+                                        <AboutWidget
+                                            title={widget.title}
+                                            links={widget.menuItems}
+                                            dark
+                                        />
                                     </div>
                                     </Reveal>
                                 )
@@ -77,7 +71,7 @@ class FooterErp extends Component {
                                 )
                             })
                         }
-                        
+
                     </div>
                 </div>
             </footer>

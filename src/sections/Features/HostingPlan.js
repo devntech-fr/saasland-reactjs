@@ -1,257 +1,17 @@
 import React, {Component} from 'react';
-import Sectitle from '../Title/Sectitle';
+import SectionTitle from "sections/Title/SectionTitle";
+import ServiceData from "sections/Service/ServiceData";
 
 class HostingPlan extends Component {
     constructor(){
         super();
-        this.state= {
-            Standard:[
-                {
-                    id: 1,
-                    title: "Oxford William owt to do with me Why cuppa buggered, nancy boy get stuffed mate absolutely bladdered blag matie boy the full monty bobby bleeder.",
-                    priceList:[
-                        {
-                            "id": 1,
-                            "Memory": "1 GB",
-                            "Vcpus": "1 vCPU",
-                            "Ssd": "125 GB",
-                            "Transfer": "1 TB",
-                            "Price": "$10/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 2,
-                            "Memory": "2 GB",
-                            "Vcpus": "2 vCPU",
-                            "Ssd": "100 GB",
-                            "Transfer": "2 TB",
-                            "Price": "$20/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 3,
-                            "Memory": "3 GB",
-                            "Vcpus": "3 vCPU",
-                            "Ssd": "50 GB",
-                            "Transfer": "3 TB",
-                            "Price": "$30/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 4,
-                            "Memory": "4 GB",
-                            "Vcpus": "4 vCPU",
-                            "Ssd": "140 GB",
-                            "Transfer": "4 TB",
-                            "Price": "$40/mo",
-                            "PriceS": "$0.015/hr",
-                        },
-                        {
-                            "id": 5,
-                            "Memory": "1 GB",
-                            "Vcpus": "1 vCPU",
-                            "Ssd": "125 GB",
-                            "Transfer": "1 TB",
-                            "Price": "$10/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 6,
-                            "Memory": "2 GB",
-                            "Vcpus": "2 vCPU",
-                            "Ssd": "100 GB",
-                            "Transfer": "2 TB",
-                            "Price": "$20/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 7,
-                            "Memory": "3 GB",
-                            "Vcpus": "3 vCPU",
-                            "Ssd": "50 GB",
-                            "Transfer": "3 TB",
-                            "Price": "$30/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 8,
-                            "Memory": "4 GB",
-                            "Vcpus": "4 vCPU",
-                            "Ssd": "140 GB",
-                            "Transfer": "4 TB",
-                            "Price": "$40/mo",
-                            "PriceS": "$0.015/hr",
-                        }
-                    ]
-                }
-            ],
-            Cpu:[
-                {
-                    id: 2,
-                    title: "Oxford William owt to do with me Why cuppa buggered, nancy boy get stuffed mate absolutely bladdered blag matie boy the full monty bobby bleeder.",
-                    priceList:[
-                        {
-                            "id": 1,
-                            "Memory": "1 GB",
-                            "Vcpus": "1 vCPU",
-                            "Ssd": "125 GB",
-                            "Transfer": "1 TB",
-                            "Price": "$10/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 2,
-                            "Memory": "2 GB",
-                            "Vcpus": "2 vCPU",
-                            "Ssd": "100 GB",
-                            "Transfer": "2 TB",
-                            "Price": "$20/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 3,
-                            "Memory": "3 GB",
-                            "Vcpus": "3 vCPU",
-                            "Ssd": "50 GB",
-                            "Transfer": "3 TB",
-                            "Price": "$30/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 4,
-                            "Memory": "4 GB",
-                            "Vcpus": "4 vCPU",
-                            "Ssd": "140 GB",
-                            "Transfer": "4 TB",
-                            "Price": "$40/mo",
-                            "PriceS": "$0.015/hr",
-                        },
-                        {
-                            "id": 5,
-                            "Memory": "1 GB",
-                            "Vcpus": "1 vCPU",
-                            "Ssd": "125 GB",
-                            "Transfer": "1 TB",
-                            "Price": "$10/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 6,
-                            "Memory": "2 GB",
-                            "Vcpus": "2 vCPU",
-                            "Ssd": "100 GB",
-                            "Transfer": "2 TB",
-                            "Price": "$20/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 7,
-                            "Memory": "3 GB",
-                            "Vcpus": "3 vCPU",
-                            "Ssd": "50 GB",
-                            "Transfer": "3 TB",
-                            "Price": "$30/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 8,
-                            "Memory": "4 GB",
-                            "Vcpus": "4 vCPU",
-                            "Ssd": "140 GB",
-                            "Transfer": "4 TB",
-                            "Price": "$40/mo",
-                            "PriceS": "$0.015/hr",
-                        }
-                    ]
-                }
-            ],
-            General:[
-                {
-                    id: 3,
-                    title: "Oxford William owt to do with me Why cuppa buggered, nancy boy get stuffed mate absolutely bladdered blag matie boy the full monty bobby bleeder.",
-                    priceList:[
-                        {
-                            "id": 1,
-                            "Memory": "1 GB",
-                            "Vcpus": "1 vCPU",
-                            "Ssd": "125 GB",
-                            "Transfer": "1 TB",
-                            "Price": "$10/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 2,
-                            "Memory": "2 GB",
-                            "Vcpus": "2 vCPU",
-                            "Ssd": "100 GB",
-                            "Transfer": "2 TB",
-                            "Price": "$20/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 3,
-                            "Memory": "3 GB",
-                            "Vcpus": "3 vCPU",
-                            "Ssd": "50 GB",
-                            "Transfer": "3 TB",
-                            "Price": "$30/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 4,
-                            "Memory": "4 GB",
-                            "Vcpus": "4 vCPU",
-                            "Ssd": "140 GB",
-                            "Transfer": "4 TB",
-                            "Price": "$40/mo",
-                            "PriceS": "$0.015/hr",
-                        },
-                        {
-                            "id": 5,
-                            "Memory": "1 GB",
-                            "Vcpus": "1 vCPU",
-                            "Ssd": "125 GB",
-                            "Transfer": "1 TB",
-                            "Price": "$10/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 6,
-                            "Memory": "2 GB",
-                            "Vcpus": "2 vCPU",
-                            "Ssd": "100 GB",
-                            "Transfer": "2 TB",
-                            "Price": "$20/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 7,
-                            "Memory": "3 GB",
-                            "Vcpus": "3 vCPU",
-                            "Ssd": "50 GB",
-                            "Transfer": "3 TB",
-                            "Price": "$30/mo",
-                            "PriceS": "$0.025/hr",
-                        },
-                        {
-                            "id": 8,
-                            "Memory": "4 GB",
-                            "Vcpus": "4 vCPU",
-                            "Ssd": "140 GB",
-                            "Transfer": "4 TB",
-                            "Price": "$40/mo",
-                            "PriceS": "$0.015/hr",
-                        }
-                    ]
-                }
-            ]
-        }
+        this.state = ServiceData.HostingPlans;
     }
     render(){
         return(
             <section className="h_pricing_area sec_pad">
             <div className="container">
-                <Sectitle Title="Check out awesome plans, And order now" TitleP="The full monty burke posh excuse my French Richard cheeky bobby spiffing crikey Why gormless, pear shaped.!" sClass="hosting_title text-center"/>
+                <SectionTitle Title="Check out awesome plans, And order now" TitleP="The full monty burke posh excuse my French Richard cheeky bobby spiffing crikey Why gormless, pear shaped.!" sClass="hosting_title text-center"/>
                 <div className="h_price_inner">
                     <ul className="nav nav-tabs hosting_tab" id="myTab" role="tablist">
                         <li className="nav-item">
@@ -284,10 +44,10 @@ class HostingPlan extends Component {
                                                 <h5>Transfer</h5>
                                             </div>
                                             <div className="p_head">
-                                                <h5>Price</h5>
+                                                <h5>SupportPrice</h5>
                                             </div>
                                             <div className="p_head c_width">
-                                                    
+
                                             </div>
                                         </div>
                                         <div className="h_price_body">
@@ -307,7 +67,7 @@ class HostingPlan extends Component {
                                                             <div className="h_price_item" data-title="Transfer">
                                                                 <h5>{list.Transfer}</h5>
                                                             </div>
-                                                            <div className="h_price_item" data-title="Price">
+                                                            <div className="h_price_item" data-title="SupportPrice">
                                                                 <h5><span>{list.Price}</span>{list.PriceS}</h5>
                                                             </div>
                                                             <div className="h_price_item c_width">
@@ -318,8 +78,8 @@ class HostingPlan extends Component {
                                                 })
                                             }
                                         </div>
-                                    </div> 
-                                </React.Fragment>          
+                                    </div>
+                                </React.Fragment>
                             ))}
                         </div>
                         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -341,10 +101,10 @@ class HostingPlan extends Component {
                                                 <h5>Transfer</h5>
                                             </div>
                                             <div className="p_head">
-                                                <h5>Price</h5>
+                                                <h5>SupportPrice</h5>
                                             </div>
                                             <div className="p_head c_width">
-                                                    
+
                                             </div>
                                         </div>
                                         <div className="h_price_body">
@@ -364,7 +124,7 @@ class HostingPlan extends Component {
                                                             <div className="h_price_item" data-title="Transfer">
                                                                 <h5>{list.Transfer}</h5>
                                                             </div>
-                                                            <div className="h_price_item" data-title="Price">
+                                                            <div className="h_price_item" data-title="SupportPrice">
                                                                 <h5><span>{list.Price}</span>{list.PriceS}</h5>
                                                             </div>
                                                             <div className="h_price_item c_width">
@@ -375,8 +135,8 @@ class HostingPlan extends Component {
                                                 })
                                             }
                                         </div>
-                                    </div> 
-                                </React.Fragment>          
+                                    </div>
+                                </React.Fragment>
                             ))}
                         </div>
                         <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -398,10 +158,10 @@ class HostingPlan extends Component {
                                                 <h5>Transfer</h5>
                                             </div>
                                             <div className="p_head">
-                                                <h5>Price</h5>
+                                                <h5>SupportPrice</h5>
                                             </div>
                                             <div className="p_head c_width">
-                                                    
+
                                             </div>
                                         </div>
                                         <div className="h_price_body">
@@ -421,7 +181,7 @@ class HostingPlan extends Component {
                                                             <div className="h_price_item" data-title="Transfer">
                                                                 <h5>{list.Transfer}</h5>
                                                             </div>
-                                                            <div className="h_price_item" data-title="Price">
+                                                            <div className="h_price_item" data-title="SupportPrice">
                                                                 <h5><span>{list.Price}</span>{list.PriceS}</h5>
                                                             </div>
                                                             <div className="h_price_item c_width">
@@ -432,8 +192,8 @@ class HostingPlan extends Component {
                                                 })
                                             }
                                         </div>
-                                    </div> 
-                                </React.Fragment>          
+                                    </div>
+                                </React.Fragment>
                             ))}
                         </div>
                     </div>

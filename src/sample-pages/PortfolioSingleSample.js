@@ -1,10 +1,10 @@
 import React from "react";
-import Portfoliosingle from "../sections/Portfolios/Portfoliosingle";
+import PortfolioSingle from "sections/Portfolio/PortfolioSingle";
 
 function PortfolioSingleSample() {
     return (
         <div className="body_wrapper">
-            <Portfoliosingle/>
+            <PortfolioSingle/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import BlogList from "../sections/Blog/BlogList";
+import BlogList from "sections/Blog/BlogList";
 
 function BlogListSample() {
     return (

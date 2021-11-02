@@ -1,31 +1,42 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-const ErpBanner =()=>{
-    return(
+function ErpBanner({ title, p, buttonLink, image, clouds }) {
+    const showClouds = () => {
+        for (let i = 0; i <= clouds; i++) {
+            return (
+                <li><img src={`/img/erp-home/cloud_0${i}.png`} alt=""/></li>
+            )
+        }
+    }
+    return (
         <section className="erp_banner_area_two">
             <ul className="list-unstyled cloud_animation">
-                <li><img src={require ("../../img/erp-home/cloud_01.png")} alt=""/></li>
-                <li><img src={require ("../../img/erp-home/cloud_02.png")} alt=""/></li>
-                <li><img src={require ("../../img/erp-home/cloud_03.png")} alt=""/></li>
-                <li><img src={require ("../../img/erp-home/cloud_04.png")} alt=""/></li>
-                <li><img src={require ("../../img/erp-home/cloud_05.png")} alt=""/></li>
-                <li><img src={require ("../../img/erp-home/cloud_06.png")} alt=""/></li>
+                {showClouds()}
             </ul>
             <div className="erp_shap"></div>
             <div className="section_intro">
                 <div className="section_container">
                     <div className="intro">
                         <div className=" intro_content">
-                            <h1>Cloud ERP Software for Small and medium business</h1>
-                            <p>A simple and powerful erp software for Manufacturing, Distribution and Services.</p>
-                            <a href="/#" className="er_btn er_btn_two">Try to Free</a>
+                            <h1>{title}</h1>
+                            <p>{p}</p>
+                            {
+                                buttonLink && (
+                                    <a href={buttonLink.href} target={buttonLink.target} className="er_btn er_btn_two">{buttonLink.label}</a>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
             </div>
             <div className="animation_img wow fadeInUp" data-wow-delay="0.3s">
                 <div className="container">
-                    <img src={require ("../../img/erp-home/erp_dashboard.jpg")} alt=""/>
+                    {
+                        image && (
+                            <img src={image.src} alt={image.alt} />
+                        )
+                    }
                 </div>
             </div>
         </section>
@@ -33,3 +44,18 @@ const ErpBanner =()=>{
 }
 
 export default ErpBanner;
+
+ErpBanner.propTypes = {
+    title: PropTypes.string.isRequired,
+    p: PropTypes.string.isRequired,
+    image: PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired
+    }),
+    buttonLink: PropTypes.shape({
+        href: PropTypes.string,
+        target: PropTypes.string,
+        label: PropTypes.string
+    }),
+    clouds: PropTypes.number
+}

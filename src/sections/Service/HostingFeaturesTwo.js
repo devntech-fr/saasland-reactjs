@@ -1,12 +1,27 @@
 import React from 'react';
-import HostingFeaturesItem from './HostingFeaturesItem';
 
-const HostingFeaturesTwo =()=>{
+function HostingFeaturesTwo({ rowClass, hImage, hTitle, hPragraph, children }) {
     return(
         <section className="hosting_features_area">
             <div className="container">
-                <HostingFeaturesItem rowClass="flex-row-reverse" hImage="business2.png" hTitle="Solutions for Your small business" hPragraph="Don't get shirty with me owt to do with me arse down the pub have it car boot happy days no biggie bevvy only a quid I, in my flat the little rotter cheeky.!" 
-                icon="icon9.png" icon2="icon10.png" text="Reseller Hosting" text2="Wordpress Hosting" tdescription="Hunky dory barney fanny around up the duff no biggie." tdescription2="Hunky dory barney fanny around up the duff no biggie."/>
+                <div className={`row ${rowClass}`}>
+                    <div className="col-lg-6">
+                        <div className="h_features_img">
+                            <img src={"/img/hosting/" + hImage} alt=""/>
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="h_features_content">
+                            <div className="hosting_title">
+                                <h2>{hTitle}</h2>
+                                <p>{hPragraph}</p>
+                            </div>
+                            <React.Fragment>
+                                {children}
+                            </React.Fragment>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )

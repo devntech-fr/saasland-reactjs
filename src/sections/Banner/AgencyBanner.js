@@ -1,82 +1,75 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Reveal from 'react-reveal/Reveal';
-class AgencyBanner extends Component {
-    render(){
-        let BannerData = this.props.BannerData;
-        return(
+import BannerImage from "components/Banner/BannerImage";
+import PartnerLogoCollection from "components/Banner/PartnerLogoCollection";
+import BannerBackground from "components/Banner/BannerBackground";
+import RichContent from "components/Content/RichContent";
+import {AgencyButton, AgencyButtonTwo} from "components/Buttons/AgencyButton";
+import BannerButtons from "components/Banner/BannerButtons";
+
+class AgencyBanner extends RichContent {
+
+    showImage = () => {
+        const { AgencyImage } = this.props.BannerData;
+        if (AgencyImage !== undefined) {
+            return (
+                <div className="col-lg-7 text-right">
+                    <Reveal effect="fadeInRight">
+                        <BannerImage image={{
+                            src: '/img/home4/banner_img.png',
+                            alt: 'Bannière',
+                            title: 'Hero banner'
+                        }}/>
+                    </Reveal>
+                </div>
+            )
+        }
+    }
+
+    render() {
+        const { ClientsLogo } = this.props.BannerData;
+        return (
             <section className="agency_banner_area bg_color">
-                <img className="banner_shap" src={require('../../img/home4/banner_bg.png')} alt=""/>
+                <BannerBackground src={'/img/home4/banner_bg.png'} />
                 <div className="container custom_container">
                     <div className="row">
                         <div className="col-lg-5 d-flex align-items-center">
                             <div className="agency_content">
-                            <Reveal effect="fadeInUp">
-                                {/*{*/}
-                                {/*    BannerData.AgencyText.map(Agency =>{*/}
-                                {/*        return(*/}
-                                {/*            <React.Fragment key={Agency.id}>*/}
-                                {/*                <h2 className="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">{Agency.btitle}</h2>*/}
-                                {/*                <p className="f_400 l_height28 wow fadeInLeft" data-wow-delay="0.4s">{Agency.description}</p>*/}
-                                {/*            </React.Fragment>*/}
-                                {/*        )*/}
-                                {/*    })*/}
-                                {/*}*/}
-                                <React.Fragment>
-                                    <h2 className="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">Agency banner title</h2>
-                                    <p className="f_400 l_height28 wow fadeInLeft" data-wow-delay="0.4s">Agency banner description</p>
-                                </React.Fragment>
-                                <div className="action_btn d-flex align-items-center mt_60">
-                                        <a href="/#" className="btn_hover agency_banner_btn wow fadeInLeft" data-wow-delay="0.5s">Get in Touch</a>
-                                        <a href="/#" className="agency_banner_btn_two wow fadeInLeft" data-wow-delay="0.7s">Google Sign Up</a>
-                                    </div>
-                                </Reveal>
+                                <h2 className="f_700 mb_40 wow fadeInLeft" dangerouslySetInnerHTML={this.displayTitle()}></h2>
+                                <p className="f_400 l_height28 wow fadeInLeft" dangerouslySetInnerHTML={this.displayParagraph()}></p>
+                                <BannerButtons>
+                                    <Reveal effect="fadeInUp">
+                                        <AgencyButton btn={{
+                                            href: '/#',
+                                            label: 'Get in touch',
+                                            classNames: 'wow fadeInLeft',
+                                            wow: '0.5s'
+                                        }}/>
+                                        <AgencyButtonTwo btn={{
+                                            href: '/#',
+                                            label: 'Sign Up',
+                                            classNames: 'wow fadeInLeft',
+                                            wow: '0.7s'
+                                        }}/>
+                                    </Reveal>
+                                </BannerButtons>
                             </div>
                         </div>
-                        <div className="col-lg-7 text-right">
-                            <Reveal effect="fadeInRight"><img className="protype_img wow fadeInRight" data-wow-delay="0.3s" src={require('../../img/home4/banner_img.png')} alt=""/></Reveal>
-                        </div>
+                        {this.showImage()}
                     </div>
-                    <div className="partner_logo">
-                        {/*{*/}
-                        {/*    BannerData.ClientsLogo.map(item =>{*/}
-                        {/*        return(*/}
-                        {/*            <Reveal key={item.id} effect="fadeInLeft" duration={1500}>*/}
-                        {/*                <div className="p_logo_item">*/}
-                        {/*                    <a href="/#"><img src={require("../../img/home3/logo_01.png")} alt=""/></a>*/}
-                        {/*                </div>*/}
-                        {/*            </Reveal>*/}
-                        {/*        )*/}
-                        {/*    })*/}
-                        {/*}*/}
-                        <Reveal effect="fadeInLeft" duration={1500}>
-                            <div className="p_logo_item">
-                                <a href="/#"><img src={require("../../img/home3/logo_01.png")} alt=""/></a>
-                            </div>
-                        </Reveal>
-                        <Reveal effect="fadeInLeft" duration={1500}>
-                            <div className="p_logo_item">
-                                <a href="/#"><img src={require("../../img/home3/logo_02.png")} alt=""/></a>
-                            </div>
-                        </Reveal>
-                        <Reveal effect="fadeInLeft" duration={1500}>
-                            <div className="p_logo_item">
-                                <a href="/#"><img src={require("../../img/home3/logo_03.png")} alt=""/></a>
-                            </div>
-                        </Reveal>
-                        <Reveal effect="fadeInLeft" duration={1500}>
-                            <div className="p_logo_item">
-                                <a href="/#"><img src={require("../../img/home3/logo_04.png")} alt=""/></a>
-                            </div>
-                        </Reveal>
-                        <Reveal effect="fadeInLeft" duration={1500}>
-                            <div className="p_logo_item">
-                                <a href="/#"><img src={require("../../img/home3/logo_05.png")} alt=""/></a>
-                            </div>
-                        </Reveal>
-                    </div>
+                    {
+                        ClientsLogo.length > 0 &&
+                        (<PartnerLogoCollection clientsLogo={ClientsLogo}/>)
+                    }
                 </div>
             </section>
         )
     }
 }
+
 export default AgencyBanner;
+
+AgencyBanner.defaultProps = {
+    title: 'Strategic design and technology agency',
+    p: `Why I say old chap that is spiffing off his nut arse pear shaped plastered Jeffrey bodge barney some dodgy.`
+}

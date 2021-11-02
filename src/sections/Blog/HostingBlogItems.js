@@ -6,7 +6,7 @@ class HostingBlogItems extends Component {
         return(
             <div className="col-sm-6">
                 <div className="h_blog_item">
-                    <a href="/#"><img src={require ("../../img/hosting/" + blogImage)} alt="blog"/></a>
+                    <a href="/#"><img src={"/img/hosting/" + blogImage} alt="blog"/></a>
                     <div className="h_blog_content">
                         <a href="/#" className="post_time"><i className="icon_clock_alt"></i>{pDate}</a>
                         <a href="/#"><h3>{blogTitle}</h3></a>

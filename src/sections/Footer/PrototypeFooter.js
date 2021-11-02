@@ -1,10 +1,21 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import AboutWidget from "sections/Footer/FooterWidget/AboutWidget";
+import Reveal from "react-reveal/Reveal";
+import SocialWidget from "components/Footer/SocialWidget";
+import CompanyWidget from "components/Footer/CompanyWidget";
 
 class PrototypeFooter extends Component {
     render(){
-        let FooterData = this.props.FooterData;
-        var{rclass} = this.props;
+        const { rclass, FooterData } = this.props;
+        const imageLink= {
+            href: '/',
+                src: '/img/logo3.png',
+                alt: 'logo'
+        };
+        const copyrights={
+            date: '2021',
+                brand: 'DroitThemes'
+        };
         return(
             <footer className={`payment_footer_area ${rclass}`}>
                 <div className="footer_top_six">
@@ -12,51 +23,33 @@ class PrototypeFooter extends Component {
                         <div className="row">
                             <div className="col-lg-4 col-sm-6">
                                 <div className="f_widget company_widget">
-                                    <a href="index.html" className="f-logo"><img src={require ('../../img/logo3.png')} alt="logo"/></a>
-                                    <p className="mt_40">Copyright © 2018 Desing by <a href=".#">DroitThemes</a></p>
+                                    {
+                                        imageLink && (
+                                            <a href={imageLink.href} className="f-logo"><img src={imageLink.src} alt={imageLink.alt}/></a>
+                                        )
+                                    }
+                                    {
+                                        copyrights && (
+                                            <p className="mt_40">Copyright © {copyrights.date} Design by <a href=".#">{copyrights.brand}</a></p>
+                                        )
+                                    }
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="f_widget about-widget">
-                                    <h3 className="f-title f_600 w_color f_size_18 mb_40">About Us</h3>
-                                    <ul className="list-unstyled f_list">
-                                        {
-                                            FooterData.aboutLinks.map(links => {
-                                                return(
-                                                    <li key={links.id}><Link to={links.url}>{links.item}</Link></li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
+                            <Reveal effect="fadeInUp" duration={1200}>
+                                <div className="col-lg-3 col-md-6">
+                                    <AboutWidget title={`A propos`} links={FooterData.aboutLinks}/>
                                 </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="f_widget about-widget">
-                                    <h3 className="f-title f_600 w_color f_size_18 mb_40">Help?</h3>
-                                    <ul className="list-unstyled f_list">
-                                        {
-                                            FooterData.helpLinks.map(links => {
-                                                return(
-                                                    <li key={links.id}><Link to={links.url}>{links.item}</Link></li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
+                            </Reveal>
+                            <Reveal effect="fadeInUp" duration={1200}>
+                                <div className="col-lg-3 col-md-6">
+                                    <AboutWidget title={`Need help ?`} links={FooterData.helpLinks}/>
                                 </div>
-                            </div>
+                            </Reveal>
                             <div className="col-lg-2 col-sm-6">
-                                <div className="f_widget social-widget">
-                                    <h3 className="f-title f_600 w_color f_size_18 mb_40">Follow Us</h3>
-                                    <div className="f_social_icon">
-                                        {
-                                            FooterData.socialIcon.map(item =>{
-                                                return(
-                                                    <a href={item.url} key={item.id}><i className={item.icon}></i></a>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                </div>
+                                <SocialWidget
+                                    title={`Follow Us`}
+                                    links={FooterData.socialIcon}
+                                />
                             </div>
                         </div>
                     </div>

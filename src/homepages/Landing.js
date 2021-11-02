@@ -1,31 +1,36 @@
 import React from 'react';
-import OnepageMenu from '../sections/OnepageMenu';
-import AppBanner from '../sections/Banner/AppBanner';
-import AppFeaturesTwo from '../sections/Features/AppFeaturesTwo';
-import AppFeatures from '../sections/Features/AppFeatures';
-import AppTestimonial from '../sections/Testimonial/AppTestimonial';
-import AppWork from '../sections/Service/AppWork';
-import ScreenshowCase from '../sections/ScreenshowCase';
-import AppGetstarted from '../sections/AppGetstarted';
-import AppTeam from '../sections/Team/AppTeam';
-import FooterTwo from '../sections/Footer/FooterTwo';
-import ServiceData from '../sections/Service/ServiceData';
-import FooterData from '../sections/Footer/FooterData';
+import AppBanner from 'sections/Banner/AppBanner';
+import AppFeaturesTwo from 'sections/Features/AppFeaturesTwo';
+import AppFeatures from 'sections/Features/AppFeatures';
+import AppTestimonial from 'sections/Testimonial/AppTestimonial';
+import AppWork from 'sections/Service/AppWork';
+import ScreenShowCase from 'sections/Product/ScreenShowCase';
+import AppGetStarted from 'sections/CallToAction/AppGetStarted';
+import AppTeam from 'sections/Team/AppTeam';
+import ServiceData from 'sections/Service/ServiceData';
+import Layout from "layouts/Layout";
 
 const Landing = () => {
     return(
-        <div className="body_wrapper">
-            <OnepageMenu slogo="sticky_logo" mClass="menu_four" nClass="w_menu" hbtnClass="btn_get_radious menu_custfive"/>
-            <AppBanner/>
-            <AppFeaturesTwo/>
+        <Layout variant={'landing'}>
+            <AppBanner
+                title={`Spend time <br/>with loved ones`}
+                p={`Why I say old chap that is spiffing off his nut arse pear shaped<br/> plastered Jeffrey bodge barney some dodgy.!!`}
+            />
+            <AppFeaturesTwo
+                title={`Inspired design for the digital app landing`}
+                p={`lorem`}
+            />
             <AppFeatures/>
             <AppWork ServiceData={ServiceData}/>
             <AppTestimonial/>
-            <ScreenshowCase/>
-            <AppGetstarted/>
+            <ScreenShowCase/>
+            <AppGetStarted/>
             <AppTeam/>
-            <FooterTwo FooterData={FooterData}/>
-        </div>
+        </Layout>
     )
 }
+
+const keywords = ['landing','home'];
+
 export default Landing;

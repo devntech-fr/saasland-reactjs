@@ -1,15 +1,15 @@
 import React from "react";
-import CustomNavbar from "../sections/CustomNavbar";
-import FooterTwo from '../sections/Footer/FooterTwo';
-import FooterData from '../sections/Footer/FooterData';
+import CustomNavbar from 'components/Navbar/CustomNavbar';
+import FooterTwo from 'sections/Footer/FooterTwo';
+import FooterData from 'sections/Footer/FooterData';
 const NotFound = () => (
   <div className="body_wrapper">
     <CustomNavbar hbtnClass="new_btn" />
     <section className="error_two_area">
       <div className="container flex">
         <div className="error_content_two text-center">
-          <img src={require("../img/new/error.png")} alt="" />
-          <h2>Error. We can’t ftind the page you’re looking for.</h2>
+          <img src={"img/new/error.png"} alt="" />
+          <h2>Error. We can’t find the page you’re looking for.</h2>
           <p>
             Sorry for the inconvenience. Go to our homepage or check out our
             latest collections for Fashion, Chair, Decoration...{" "}

@@ -1,19 +1,37 @@
 const BannerData = {
-    AgencyText : [
+    AgencyText: {
+        id: 1,
+        title : 'Strategic design and technology agency',
+        description : 'Why I say old chap that is spiffing off his nut arse pear shaped plastered Jeffrey bodge barney some dodgy.',
+    },
+    AgencyImage: {
+        src: '/img/home4/banner_img.png',
+        alt: "Agency banner image"
+    },
+    AgencyButtons : [
         {
             id: 1,
-            btitle : 'Starategic design and technology agency',
-            description : 'Why I say old chap that is spiffing off his nut arse pear shaped plastered Jeffrey bodge barney some dodgy.',
-        }
+            label : 'Get in Touch',
+            href : '#get-in-touch',
+            target: '_self',
+            classNames: ' btn_hover agency_banner_btn'
+        },
+        {
+            id: 2,
+            label : 'Google Sign Up',
+            href : '#sign-up/google',
+            target: '_self',
+            classNames: ' agency_banner_btn_two'
+        },
     ],
     ClientsLogo: [
         {
             id : 1,
-            image: 'logo_01.png'
+            image: 'logo_01.png',
         },
         {
             id : 2,
-            image: 'logo_02.png'
+            image: 'logo_02.png',
         },
         {
             id : 3,
@@ -25,7 +43,7 @@ const BannerData = {
         },
         {
             id : 5,
-            image: 'logo_05.png'
+            image: 'logo_05.png',
         }
     ],
     AgencyTestimonial: [

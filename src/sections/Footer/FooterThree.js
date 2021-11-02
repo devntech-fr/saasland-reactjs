@@ -12,7 +12,7 @@ class FooterThree extends Component{
                         <div className="row">
                             <div className="col-lg-5 col-md-6">
                                 <div className="f_widget company_widget pr_100">
-                                    <a href="index.html" className="f-logo"><img src={require ('../../img/logo.png')} alt=""/></a>
+                                    <a href="index.html" className="f-logo"><img src={'/img/logo.png'} alt=""/></a>
                                     <p className="f_400 f_p f_size_16 mb-0 l_height28 mt_40">Tickety-boo victoria sponge only a quid I don't want no agro morish bum bag gutted mate up the duff, bloke blag cup of char super bugger all mate.!</p>
                                     <div className="f_social_icon_two mt_30">
                                         {

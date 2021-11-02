@@ -17,7 +17,7 @@ const PaymentTestimonial = () => {
                         </div>
                         <div className="col-lg-5">
                             <div className="testimonial_img">
-                                <img src={require ('../../img/home9/testimonial_img.png')} alt=""/>
+                                <img src={'/img/home9/testimonial_img.png'} alt=""/>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ const PaymentTestimonial = () => {
                         <Reveal effect="fadeInUp" cascade>
                         <div className="pay_icon">
                             <div className="icon_shape"></div>
-                            <img className="icon_img" src={require('../../img/home9/icon2.png')} alt=""/>
+                            <img className="icon_img" src={'/img/home9/icon2.png'} alt=""/>
                         </div>
                         <h2 className="f_p t_color f_700">Join 200 million PayPal users worldwide.</h2>
                         <p>All you need is an email address or mobile phone number to transfer money. If they<br/> don't have an account, they can create one quickly, for free.</p>

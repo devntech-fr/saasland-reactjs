@@ -23,27 +23,27 @@ class ChatFeatures extends Component {
             <div className={col1}>
               <div className="chat_features_img chat_features_img_one">
                 <img
-                  className="p_absoulte dot_bg"
-                  src={require("../../img/home-chat/" + img1)}
+                  className="p_absolute dot_bg"
+                  src={"/img/home-chat/" + img1}
                   alt=""
                 />
                 <img
                   className="chat_one"
                   data-parallax='{"x": 0, "y": 80}'
-                  src={require("../../img/home-chat/" + img2)}
+                  src={"/img/home-chat/" + img2}
                   alt=""
                 />
                 <img
-                  className="p_absoulte chat_two"
+                  className="p_absolute chat_two"
                   data-parallax='{"x": 0, "y": -80}'
-                  src={require("../../img/home-chat/" + img3)}
+                  src={"/img/home-chat/" + img3}
                   alt=""
                 />
               </div>
             </div>
             <div className={col2}>
               <div className={`chat_features_content ${pClass}`}>
-                <img src={require("../../img/home-chat/" + icon)} alt="" />
+                <img src={"/img/home-chat/" + icon} alt="" />
                 <h2>
                   <span>{titleSmall}</span> {titlebig}
                 </h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import BlogSingle from "../sections/Blog/BlogSingle";
+import BlogSingle from "sections/Blog/BlogSingle";
 
 function BlogSingleSample() {
     return (

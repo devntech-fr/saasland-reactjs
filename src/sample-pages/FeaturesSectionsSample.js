@@ -1,20 +1,19 @@
 import React from "react";
-import AppFeatures from "../sections/Features/AppFeatures";
-import AppFeaturesTwo from "../sections/Features/AppFeaturesTwo";
-import ChatFeatures from "../sections/Features/ChatFeatures";
-import CloudFeatures from "../sections/Features/CloudFeatures";
-import CloudFeaturesTwo from "../sections/Features/CloudFeaturesTwo";
-import CoreFeatures from "../sections/Features/CoreFeatures";
-import Designtab from "../sections/Features/Designtab";
-import ErpFeatures from "../sections/Features/ErpFeatures";
-import EventFeatures from "../sections/Features/EventFeatures";
-import Features from "../sections/Features/Features";
-import HostingPlan from "../sections/Features/HostingPlan";
-import PaymentFeatures from "../sections/Features/PaymentFeatures";
-import SecurityFeatures from "../sections/Features/SecurityFeatures";
-import SoftwareFeatures from "../sections/Features/SoftwareFeatures";
-import StartupFeatures from "../sections/Features/StartupFeatures";
-import TrackingProduct from "../sections/Features/TrackingProduct";
+import AppFeatures from "sections/Features/AppFeatures";
+import AppFeaturesTwo from "sections/Features/AppFeaturesTwo";
+import ChatFeatures from "sections/Features/ChatFeatures";
+import CloudFeatures from "sections/Features/CloudFeatures";
+import CloudFeaturesTwo from "sections/Features/CloudFeaturesTwo";
+import CoreFeatures from "sections/Features/CoreFeatures";
+import DesignTab from "sections/Features/DesignTab";
+import ErpFeatures from "sections/Features/ErpFeatures";
+import EventFeatures from "sections/Features/EventFeatures";
+import Features from "sections/Features/Features";
+import PaymentFeatures from "sections/Features/PaymentFeatures";
+import SecurityFeatures from "sections/Features/SecurityFeatures";
+import SoftwareFeatures from "sections/Features/SoftwareFeatures";
+import StartupFeatures from "sections/Features/StartupFeatures";
+import TrackingProduct from "sections/Features/TrackingProduct";
 
 function FeaturesSectionsSample() {
     return (
@@ -26,7 +25,7 @@ function FeaturesSectionsSample() {
             <CloudFeatures/>
             <CloudFeaturesTwo/>
             <CoreFeatures/>
-            <Designtab/>
+            <DesignTab/>
             <ErpFeatures/>
             <EventFeatures/>
             <Features/>

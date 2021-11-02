@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import AboutButton from "./AboutButton";
 
-function AboutContent() {
+function AboutContent({ title, p, buttonLink}) {
     return (
         <div className="about_content mb_30">
             <h2 className="f_size_30 f_700 l_height45 mb_20">We craft marketing & digital products that grow businesses.</h2>
@@ -13,9 +13,9 @@ function AboutContent() {
 }
 
 AboutContent.propTypes = {
-    h2: PropTypes.string,
-    content: PropTypes.string,
-    button: PropTypes.instanceOf(AboutButton)
+    title: PropTypes.string,
+    p: PropTypes.string,
+    buttonLink: PropTypes.instanceOf(AboutButton)
 }
 
 export default AboutContent;

@@ -1,5 +1,5 @@
 import React from "react";
-import EventGallery from "../sections/Portfolios/EventGallery";
+import EventGallery from "sections/Portfolio/EventGallery";
 
 function EventGallerySample() {
     return (

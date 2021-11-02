@@ -78,49 +78,73 @@ const ServiceData = {
     HRService: [
         {
             id: '1',
-            HRtitles : 'Export Presets',
-            HRdescription: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
-            Hicon: 'panel',
+            title : 'Le nouveau né',
+            description: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
+            image: {
+                src: '/img/erp-home/baby.png',
+                alt: 'Le nouveau né'
+            },
+            icon: 'panel',
             rclass : 'pr_70',
             iclass: 'icon_one',
         },
         {
             id: '2',
-            HRtitles : 'Grid and Guides',
-            HRdescription: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
-            Hicon: 'layout-grid2',
+            title : 'Le tout-petit',
+            description: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
+            image: {
+                src: '/img/erp-home/enfants.png',
+                alt: 'Le nouveau né'
+            },
+            icon: 'layout-grid2',
             rclass : 'pl_50 pr_20',
             iclass: 'icon_two',
         },
         {
             id: '3',
-            HRtitles : 'Pixel Precision',
-            HRdescription: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
-            Hicon: 'fullscreen',
+            title : 'L\'enfant',
+            description: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
+            image: {
+                src: '/img/erp-home/baby.png',
+                alt: 'Le nouveau né'
+            },
+            icon: 'fullscreen',
             rclass : 'pl_70',
             iclass: 'icon_three',
         },
         {
             id: '4',
-            HRtitles : 'Vector Editing',
-            HRdescription: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
-            Hicon: 'vector',
+            title : 'L\'adolescent',
+            description: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
+            image: {
+                src: '/img/erp-home/baby.png',
+                alt: 'Le nouveau né'
+            },
+            icon: 'vector',
             rclass : 'pr_70',
             iclass: 'icon_four',
         },
         {
             id: '5',
-            HRtitles : 'Cloud Service',
-            HRdescription: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
-            Hicon: 'cloud-down',
+            title : 'L\'adulte',
+            description: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
+            image: {
+                src: '/img/erp-home/baby.png',
+                alt: 'Le nouveau né'
+            },
+            icon: 'cloud-down',
             rclass : 'pl_50 pr_20',
             iclass: 'icon_five',
         },
         {
             id: '6',
-            HRtitles : 'Iterate at Speed',
-            HRdescription: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
-            Hicon: 'bolt',
+            title : 'La personne âgée',
+            description: 'Bog cheeky bugger blow off only a quid grub he legged it porkies tosser young delinquent argy-bargy.',
+            image: {
+                src: '/img/erp-home/baby.png',
+                alt: 'Le nouveau né'
+            },
+            icon: 'bolt',
             rclass : 'pl_70',
             iclass: 'icon_six',
         }
@@ -195,19 +219,318 @@ const ServiceData = {
             icon: 'ti-settings one',
             title: 'Premium plugins',
             p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
+            button: {
+                label : 'Learn More',
+                href : '#learnmore',
+                target: '_self',
+                classNames: ' learn_btn_two',
+                iconClassName: 'ti-arrow-right'
+            }
         },
         {
             id: '02',
             icon: 'ti-heart-broken two',
             title: 'Premium plugins',
             p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
+            button: {
+                label : 'Learn More',
+                href : '#learnmore',
+                target: '_self',
+                classNames: ' learn_btn_two',
+                iconClassName: 'ti-arrow-right'
+            }
         },
         {
             id: '03',
             icon: 'ti-target  three',
             title: 'Live page builder',
             p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
+            button: {
+                label : 'Learn More',
+                href : '#learnmore',
+                target: '_self',
+                classNames: ' learn_btn_two',
+                iconClassName: 'ti-arrow-right'
+            }
         }
-    ]
+    ],
+    HostingPlans: {
+        Standard:[
+            {
+                id: 1,
+                title: "Oxford William owt to do with me Why cuppa buggered, nancy boy get stuffed mate absolutely bladdered blag matie boy the full monty bobby bleeder.",
+                priceList:[
+                    {
+                        "id": 1,
+                        "Memory": "1 GB",
+                        "Vcpus": "1 vCPU",
+                        "Ssd": "125 GB",
+                        "Transfer": "1 TB",
+                        "Price": "$10/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 2,
+                        "Memory": "2 GB",
+                        "Vcpus": "2 vCPU",
+                        "Ssd": "100 GB",
+                        "Transfer": "2 TB",
+                        "Price": "$20/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 3,
+                        "Memory": "3 GB",
+                        "Vcpus": "3 vCPU",
+                        "Ssd": "50 GB",
+                        "Transfer": "3 TB",
+                        "Price": "$30/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 4,
+                        "Memory": "4 GB",
+                        "Vcpus": "4 vCPU",
+                        "Ssd": "140 GB",
+                        "Transfer": "4 TB",
+                        "Price": "$40/mo",
+                        "PriceS": "$0.015/hr",
+                    },
+                    {
+                        "id": 5,
+                        "Memory": "1 GB",
+                        "Vcpus": "1 vCPU",
+                        "Ssd": "125 GB",
+                        "Transfer": "1 TB",
+                        "Price": "$10/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 6,
+                        "Memory": "2 GB",
+                        "Vcpus": "2 vCPU",
+                        "Ssd": "100 GB",
+                        "Transfer": "2 TB",
+                        "Price": "$20/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 7,
+                        "Memory": "3 GB",
+                        "Vcpus": "3 vCPU",
+                        "Ssd": "50 GB",
+                        "Transfer": "3 TB",
+                        "Price": "$30/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 8,
+                        "Memory": "4 GB",
+                        "Vcpus": "4 vCPU",
+                        "Ssd": "140 GB",
+                        "Transfer": "4 TB",
+                        "Price": "$40/mo",
+                        "PriceS": "$0.015/hr",
+                    }
+                ]
+            }
+        ],
+        Cpu:[
+            {
+                id: 2,
+                title: "Oxford William owt to do with me Why cuppa buggered, nancy boy get stuffed mate absolutely bladdered blag matie boy the full monty bobby bleeder.",
+                priceList:[
+                    {
+                        "id": 1,
+                        "Memory": "1 GB",
+                        "Vcpus": "1 vCPU",
+                        "Ssd": "125 GB",
+                        "Transfer": "1 TB",
+                        "Price": "$10/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 2,
+                        "Memory": "2 GB",
+                        "Vcpus": "2 vCPU",
+                        "Ssd": "100 GB",
+                        "Transfer": "2 TB",
+                        "Price": "$20/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 3,
+                        "Memory": "3 GB",
+                        "Vcpus": "3 vCPU",
+                        "Ssd": "50 GB",
+                        "Transfer": "3 TB",
+                        "Price": "$30/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 4,
+                        "Memory": "4 GB",
+                        "Vcpus": "4 vCPU",
+                        "Ssd": "140 GB",
+                        "Transfer": "4 TB",
+                        "Price": "$40/mo",
+                        "PriceS": "$0.015/hr",
+                    },
+                    {
+                        "id": 5,
+                        "Memory": "1 GB",
+                        "Vcpus": "1 vCPU",
+                        "Ssd": "125 GB",
+                        "Transfer": "1 TB",
+                        "Price": "$10/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 6,
+                        "Memory": "2 GB",
+                        "Vcpus": "2 vCPU",
+                        "Ssd": "100 GB",
+                        "Transfer": "2 TB",
+                        "Price": "$20/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 7,
+                        "Memory": "3 GB",
+                        "Vcpus": "3 vCPU",
+                        "Ssd": "50 GB",
+                        "Transfer": "3 TB",
+                        "Price": "$30/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 8,
+                        "Memory": "4 GB",
+                        "Vcpus": "4 vCPU",
+                        "Ssd": "140 GB",
+                        "Transfer": "4 TB",
+                        "Price": "$40/mo",
+                        "PriceS": "$0.015/hr",
+                    }
+                ]
+            }
+        ],
+        General:[
+            {
+                id: 3,
+                title: "Oxford William owt to do with me Why cuppa buggered, nancy boy get stuffed mate absolutely bladdered blag matie boy the full monty bobby bleeder.",
+                priceList:[
+                    {
+                        "id": 1,
+                        "Memory": "1 GB",
+                        "Vcpus": "1 vCPU",
+                        "Ssd": "125 GB",
+                        "Transfer": "1 TB",
+                        "Price": "$10/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 2,
+                        "Memory": "2 GB",
+                        "Vcpus": "2 vCPU",
+                        "Ssd": "100 GB",
+                        "Transfer": "2 TB",
+                        "Price": "$20/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 3,
+                        "Memory": "3 GB",
+                        "Vcpus": "3 vCPU",
+                        "Ssd": "50 GB",
+                        "Transfer": "3 TB",
+                        "Price": "$30/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 4,
+                        "Memory": "4 GB",
+                        "Vcpus": "4 vCPU",
+                        "Ssd": "140 GB",
+                        "Transfer": "4 TB",
+                        "Price": "$40/mo",
+                        "PriceS": "$0.015/hr",
+                    },
+                    {
+                        "id": 5,
+                        "Memory": "1 GB",
+                        "Vcpus": "1 vCPU",
+                        "Ssd": "125 GB",
+                        "Transfer": "1 TB",
+                        "Price": "$10/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 6,
+                        "Memory": "2 GB",
+                        "Vcpus": "2 vCPU",
+                        "Ssd": "100 GB",
+                        "Transfer": "2 TB",
+                        "Price": "$20/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 7,
+                        "Memory": "3 GB",
+                        "Vcpus": "3 vCPU",
+                        "Ssd": "50 GB",
+                        "Transfer": "3 TB",
+                        "Price": "$30/mo",
+                        "PriceS": "$0.025/hr",
+                    },
+                    {
+                        "id": 8,
+                        "Memory": "4 GB",
+                        "Vcpus": "4 vCPU",
+                        "Ssd": "140 GB",
+                        "Transfer": "4 TB",
+                        "Price": "$40/mo",
+                        "PriceS": "$0.015/hr",
+                    }
+                ]
+            }
+        ]
+    },
+    HostingMap: {
+        Map: [
+            {
+                id: 1,
+                countryName: 'Singapore',
+            },
+            {
+                id: 2,
+                countryName: 'Toronto, Canada',
+            },
+            {
+                id: 3,
+                countryName: 'Bursa, Turcja',
+            },
+            {
+                id: 4,
+                countryName: 'Bangalore, India',
+            },
+            {
+                id: 5,
+                countryName: 'Dingxi, Chiny',
+            },
+            {
+                id: 6,
+                countryName: 'New York, USA',
+            },
+            {
+                id: 7,
+                countryName: 'Frankfurt, Germany',
+            },
+            {
+                id: 8,
+                countryName: 'Karaa, Kambodza',
+            }
+        ]
+    }
 }
 export default ServiceData;

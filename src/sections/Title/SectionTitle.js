@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
+import RichContent from "components/Content/RichContent";
 
-class Sectiontitle extends Component {
+class SectionTitle extends RichContent {
     render(){
-        var {Title, TitleP} = this.props;
+        var {title, p, sClass, tClass} = this.props;
         return(
-            <div className="section_title text-center mb_60">
-                <h2 className="mb_0 title_h2 t_color wow fadeInUp" data-wow-delay="0.3s">{Title}</h2>
-                <p className="mb_0 title_p wow fadeInUp" data-wow-delay="0.6s">{TitleP}</p>
+            <div className={`${sClass} ${tClass}`}>
+                <h2 className="mb_0 title_h2 t_color wow fadeInUp" data-wow-delay="0.3s" dangerouslySetInnerHTML={this.displayTitle(title)}></h2>
+                <p className="mb_0 wow fadeInUp" data-wow-delay="0.6s" dangerouslySetInnerHTML={this.displayParagraph(p)}></p>
                 <span className="bottom_line wow fadeInLeft" data-wow-delay="0.9s"></span>
             </div>
         )
     }
 }
-export default Sectiontitle;
+
+export default SectionTitle;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-class Tabitem extends Component{
+class CloudServiceTabItem extends Component{
     render(){
         var {ticon,text, description, colClass} = this.props;
         return(
@@ -13,4 +13,4 @@ class Tabitem extends Component{
         )
     }
 }
-export default Tabitem;
+export default CloudServiceTabItem;

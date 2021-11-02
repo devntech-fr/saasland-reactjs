@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "../sections/Footer/Footer";
-import FooterData from "../sections/Footer/FooterData";
-import FooterErp from "../sections/Footer/FooterErp";
-import FooterSecurity from "../sections/Footer/FooterSecurity";
-import FooterThree from "../sections/Footer/FooterThree";
-import FooterTwo from "../sections/Footer/FooterTwo";
-import PrototypeFooter from "../sections/Footer/PrototypeFooter";
+import Footer from "sections/Footer/Footer";
+import FooterData from "sections/Footer/FooterData";
+import FooterErp from "sections/Footer/FooterErp";
+import FooterSecurity from "sections/Footer/FooterSecurity";
+import FooterThree from "sections/Footer/FooterThree";
+import FooterTwo from "sections/Footer/FooterTwo";
+import PrototypeFooter from "sections/Footer/PrototypeFooter";
 
 function FooterSample() {
     return (

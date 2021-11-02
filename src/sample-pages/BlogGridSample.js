@@ -1,5 +1,5 @@
 import React from "react";
-import BlogGrid from "../sections/Blog/BlogGrid";
+import BlogGrid from "sections/Blog/BlogGrid";
 
 function BlogGridSample() {
     return (

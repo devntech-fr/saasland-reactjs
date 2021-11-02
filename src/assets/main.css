@@ -8,7 +8,7 @@ is the file you need to edit to change the look of the
 template.
 ---------------------------------------------------- */
 /*=====================================================================
-@Template Name: 
+@Template Name:
 @Author: Md. Shahadat Hussain
 @Developed By: Rony
 @Developer URL: https://themeforest.net/user/droitthemes
@@ -67,7 +67,7 @@ i:before {
 
 body {
   font-size: 15px;
-  font-weight: 300; 
+  font-weight: 300;
   line-height: 28px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 0px;
@@ -1391,7 +1391,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     visibility: visible;
   }
 }
-/* 
+/*
 .menu > .nav-item:nth-last-child(-n+2).submenu .dropdown-menu {
   left: auto;
   right: 0;
@@ -3405,7 +3405,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   left: 0;
   top: 0;
   z-index: -1;
-  background: url("../img/home5/shap_tecture.png") no-repeat scroll center 0/cover;
+  background: url("/img/home5/shap_tecture.png") no-repeat scroll center 0/cover;
 }
 
 /*=============== saas banner area ================*/
@@ -3961,7 +3961,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .new_startup_banner_area:before {
   content: "";
-  background: url("../img/new/startup_banner_bg.png") no-repeat scroll center bottom;
+  background: url("/img/new/startup_banner_bg.png") no-repeat scroll center bottom;
   position: absolute;
   left: 0;
   width: 100%;
@@ -4044,7 +4044,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   top: 0;
   left: 0;
   position: absolute;
-  background: url("../img/new/startup_shap.png") no-repeat scroll center bottom/cover;
+  background: url("/img/new/startup_shap.png") no-repeat scroll center bottom/cover;
   z-index: -1;
 }
 
@@ -4068,7 +4068,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 50px;
 }
 
-.stratup_app_screen {
+.startup_app_screen {
   position: absolute;
   width: 48%;
   height: 100%;
@@ -4076,17 +4076,17 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   z-index: -1;
 }
 
-.stratup_app_screen .phone, .stratup_app_screen .laptop {
+.startup_app_screen .phone, .startup_app_screen .laptop {
   position: absolute;
   right: 0;
 }
 
-.stratup_app_screen .phone {
+.startup_app_screen .phone {
   bottom: -220px;
   left: 0;
 }
 
-.stratup_app_screen .laptop {
+.startup_app_screen .laptop {
   right: -200px;
   bottom: -200px;
 }
@@ -4113,7 +4113,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   right: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/new/digital_img.png") no-repeat scroll right 0;
+  background: url("/img/new/digital_img.png") no-repeat scroll right 0;
   top: 0;
   z-index: -1;
 }
@@ -6472,7 +6472,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .perfect_solution_area .perfect_solution_right .bg_img {
-  background: url("../img/new/solution_01.jpg") no-repeat scroll center 0;
+  background: url("/img/new/solution_01.jpg") no-repeat scroll center 0;
   position: absolute;
   left: 0;
   top: 0;
@@ -6483,7 +6483,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .perfect_solution_area .perfect_solution_right .bg_img.bg_two {
-  background: url("../img/new/solution_02.jpg") no-repeat scroll center 0;
+  background: url("/img/new/solution_02.jpg") no-repeat scroll center 0;
 }
 
 /*=========== startup_fuatures_area css ==========*/
@@ -6595,7 +6595,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .startup_tab_img:before {
   content: "";
   height: 100%;
-  background: url("../img/new/tab_shape_bg.png") no-repeat scroll center 0/contain;
+  background: url("/img/new/tab_shape_bg.png") no-repeat scroll center 0/contain;
   top: 0px;
   right: -55px;
   left: -55px;
@@ -7178,7 +7178,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .service_carousel .slick-next:hover {
   background: #7444fd !important;
-  
+
 }
 .service_carousel .slick-next:hover:before{
   color: #fff !important;
@@ -7657,7 +7657,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   padding-bottom: 150px;
   position: relative;
   z-index: 2;
-  background: url("../img/home9/shape_two.png") no-repeat scroll center 0;
+  background: url("/img/home9/shape_two.png") no-repeat scroll center 0;
   background-size: cover;
 }
 
@@ -7680,7 +7680,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .pay_icon {
-  background: url("../img/home9/icon_shape_two.png") no-repeat scroll center 0;
+  background: url("/img/home9/icon_shape_two.png") no-repeat scroll center 0;
   width: 110px;
   height: 103px;
   text-align: center;
@@ -7711,40 +7711,40 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 0;
 }
 
-/*============= stratup_service_area css =============*/
-.stratup_service_img {
+/*============= startup_service_area css =============*/
+.startup_service_img {
   position: relative;
   padding-top: 20px;
   z-index: 1;
 }
 
-.stratup_service_img .shape {
+.startup_service_img .shape {
   position: absolute;
   left: -37px;
   right: 0;
   top: 0;
   bottom: 0;
-  background: url(../img/new/new_shape.png) no-repeat scroll left 0;
+  background: url('../img/new/new_shape.png') no-repeat scroll left 0;
   z-index: -1;
   background-size: contain;
 }
 
-.stratup_service_img .phone_img {
+.startup_service_img .phone_img {
   position: absolute;
   left: 0;
   bottom: 0;
 }
 
-.stratup_service_info {
+.startup_service_info {
   margin-left: -15px;
 }
 
-.stratup_service_info .startup_service_item {
+.startup_service_info .startup_service_item {
   position: relative;
   padding-left: 75px;
 }
 
-.stratup_service_info .startup_service_item .icon {
+.startup_service_info .startup_service_item .icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -7758,19 +7758,19 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   top: -5px;
 }
 
-.stratup_service_info .startup_service_item .icon.icon_two {
+.startup_service_info .startup_service_item .icon.icon_two {
   background: #f3af4e;
 }
 
-.stratup_service_info .startup_service_item .icon.icon_three {
+.startup_service_info .startup_service_item .icon.icon_three {
   background: #fa6fd1;
 }
 
-.stratup_service_info .startup_service_item .icon.icon_four {
+.startup_service_info .startup_service_item .icon.icon_four {
   background: #fa6666;
 }
 
-.stratup_service_info .startup_service_item h3 {
+.startup_service_info .startup_service_item h3 {
   font-size: 18px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -7778,17 +7778,17 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 2px;
 }
 
-.stratup_service_info .startup_service_item p {
+.startup_service_info .startup_service_item p {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 0;
 }
 
-.stratup_service_info .startup_service_item + .startup_service_item {
+.startup_service_info .startup_service_item + .startup_service_item {
   margin-top: 40px;
 }
 
-/*============= stratup_service_area css =============*/
+/*============= startup_service_area css =============*/
 /*============= progress_bar_area css =============*/
 .progress_bar_area {
   padding-top: 120px;
@@ -8241,7 +8241,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   content: "";
   width: 100%;
   height: 100%;
-  background: url("../img/saas/map.png") no-repeat scroll center 0;
+  background: url("/img/saas/map.png") no-repeat scroll center 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -8567,7 +8567,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   top: 0;
   left: 0;
   position: absolute;
-  background: url("../img/home2/action_bg.png") no-repeat scroll center 0;
+  background: url("/img/home2/action_bg.png") no-repeat scroll center 0;
 }
 
 .call_action_area .action_one {
@@ -8748,7 +8748,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   height: 100px;
   left: 0;
   z-index: -1;
-  background: url("../img/home4/action_shap.png") no-repeat scroll center top;
+  background: url("/img/home4/action_shap.png") no-repeat scroll center top;
   top: 0;
   background-size: contain;
 }
@@ -8798,7 +8798,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../img/new/price_bg.png") no-repeat scroll center;
+  background: url("/img/new/price_bg.png") no-repeat scroll center;
   position: absolute;
   z-index: -1;
 }
@@ -9969,7 +9969,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../img/new/feedback_shap.png") no-repeat scroll center 0;
+  background: url("/img/new/feedback_shap.png") no-repeat scroll center 0;
   position: absolute;
   z-index: -1;
 }
@@ -10405,7 +10405,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   height: 85px;
   top: -82px;
   left: 0;
-  background: url("../img/home9/triangle_top.png") no-repeat;
+  background: url("/img/home9/triangle_top.png") no-repeat;
 }
 
 .payment_clients_area .clients_bg_shape_right {
@@ -10555,7 +10555,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   height: 85px;
   top: 0px;
   left: 0;
-  background: url("../img/home9/triangle_bottom.png") no-repeat;
+  background: url("/img/home9/triangle_bottom.png") no-repeat;
   background-size: contain;
 }
 
@@ -10769,14 +10769,14 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   left: 60px;
 }
 
-.stratup_testimonial_info {
+.startup_testimonial_info {
   height: 576px;
   position: relative;
 }
 
-.stratup_testimonial_info:before {
+.startup_testimonial_info:before {
   content: "";
-  background: url("../img/new/testimonial_bg.png") no-repeat scroll center 0/contain;
+  background: url("/img/new/testimonial_bg.png") no-repeat scroll center 0/contain;
   width: 100%;
   height: 100%;
   top: 0;
@@ -10832,8 +10832,8 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   position: relative;
 }
 
-.testimonial_area_five .stratup_testimonial_info:before {
-  background: url("../img/new/testimonial_bg_two.png") no-repeat scroll center 0/contain;
+.testimonial_area_five .startup_testimonial_info:before {
+  background: url("/img/new/testimonial_bg_two.png") no-repeat scroll center 0/contain;
 }
 
 .testimonial_area_five .testimonial_title h6 {
@@ -10858,7 +10858,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   position: absolute;
   left: 85px;
   top: -80px;
-  background: url("../img/new/leaf.png") no-repeat scroll;
+  background: url("/img/new/leaf.png") no-repeat scroll;
   z-index: -2;
 }
 
@@ -10879,9 +10879,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 4px;
-  background: -webkit-linear-gradient(40deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url("../img/new/video_bg.jpg") no-repeat;
-  background: -o-linear-gradient(40deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url("../img/new/video_bg.jpg") no-repeat;
-  background: linear-gradient(50deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url("../img/new/video_bg.jpg") no-repeat;
+  background: -webkit-linear-gradient(40deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url("/img/new/video_bg.jpg") no-repeat;
+  background: -o-linear-gradient(40deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url("/img/new/video_bg.jpg") no-repeat;
+  background: linear-gradient(50deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%), url("/img/new/video_bg.jpg") no-repeat;
   background-size: cover;
   -webkit-box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
   box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
@@ -10994,7 +10994,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .seo_fact_info:before {
   content: "";
-  background: url("../img/seo/shap.png") no-repeat scroll center center;
+  background: url("/img/seo/shap.png") no-repeat scroll center center;
   position: absolute;
   left: 0;
   width: 100%;
@@ -12896,7 +12896,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .seo_subscribe_area .overlay_img {
-  background: url("../img/seo/cloud_bg.png") no-repeat scroll center 0/cover;
+  background: url("/img/seo/cloud_bg.png") no-repeat scroll center 0/cover;
   position: absolute;
   top: 0;
   width: 100%;
@@ -12979,9 +12979,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 /*====================================================*/
 /*================= error_area css ==================*/
 .error_area {
-  background: -moz-linear-gradient(180deg, rgba(94, 44, 237, 0.93) 0%, rgba(164, 133, 253, 0.9) 100%), url("../img/error_bg.png") no-repeat scroll center 100%;
-  background: -webkit-linear-gradient(180deg, rgba(94, 44, 237, 0.93) 0%, rgba(164, 133, 253, 0.9) 100%), url("../img/error_bg.png") no-repeat scroll center 100%;
-  background: -ms-linear-gradient(180deg, rgba(94, 44, 237, 0.93) 0%, rgba(164, 133, 253, 0.9) 100%), url("../img/error_bg.png") no-repeat scroll center 100%;
+  background: -moz-linear-gradient(180deg, rgba(94, 44, 237, 0.93) 0%, rgba(164, 133, 253, 0.9) 100%), url("/img/error_bg.png") no-repeat scroll center 100%;
+  background: -webkit-linear-gradient(180deg, rgba(94, 44, 237, 0.93) 0%, rgba(164, 133, 253, 0.9) 100%), url("/img/error_bg.png") no-repeat scroll center 100%;
+  background: -ms-linear-gradient(180deg, rgba(94, 44, 237, 0.93) 0%, rgba(164, 133, 253, 0.9) 100%), url("/img/error_bg.png") no-repeat scroll center 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13127,7 +13127,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/new/case/parallax.png") no-repeat scroll center center;
+  background: url("/img/new/case/parallax.png") no-repeat scroll center center;
   z-index: -1;
 }
 
@@ -17593,7 +17593,7 @@ input[type="text"] {
 .split_banner .contact_bg {
   position: absolute;
   top: 0;
-  background: url("../img/new/home-split/contact.png");
+  background: url("/img/new/home-split/contact.png");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -17832,7 +17832,7 @@ input[type="text"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/hosting/map.png") no-repeat scroll center 0/cover;
+  background: url("/img/hosting/map.png") no-repeat scroll center 0/cover;
   z-index: -1;
 }
 
@@ -18371,7 +18371,7 @@ a .h_head:hover {
 }
 
 .h_map {
-  background: url("../img/hosting/region_map.png") no-repeat scroll center top;
+  background: url("/img/hosting/region_map.png") no-repeat scroll center top;
   height: 595px;
 }
 
@@ -19331,7 +19331,7 @@ a .h_head:hover {
 
 /*=========== erp_analytics_area css ============*/
 .erp_analytics_area {
-  background: url("../img/erp-home/background.png") no-repeat scroll center 0/cover;
+  background: url("/img/erp-home/background.png") no-repeat scroll center 0/cover;
   padding: 100px 0px 220px;
 }
 
@@ -19495,7 +19495,7 @@ a .h_head:hover {
 .erp_call_action_area:before {
   content: "";
   position: absolute;
-  background: url("../img/erp-home/shape.png") no-repeat scroll center bottom/cover;
+  background: url("/img/erp-home/shape.png") no-repeat scroll center bottom/cover;
   width: 100%;
   left: 0;
   height: 100%;
@@ -19853,7 +19853,7 @@ a .h_head:hover {
   content: "";
   width: 100%;
   height: 10px;
-  background: url("../img/pos/shape_bg.png") no-repeat scroll center bottom/cover;
+  background: url("/img/pos/shape_bg.png") no-repeat scroll center bottom/cover;
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -20844,7 +20844,7 @@ a .h_head:hover {
   animation: spinnerRotateone 6s both alternate infinite;
 }
 
-.p_absoulte {
+.p_absolute {
   position: absolute;
 }
 
@@ -21965,7 +21965,7 @@ a .h_head:hover {
 }
 
 .analytices_action_area_two:after {
-  background: url("../img/home-software/down_bg.png") no-repeat scroll;
+  background: url("/img/home-software/down_bg.png") no-repeat scroll;
   top: -70%;
 }
 
@@ -22700,7 +22700,7 @@ a .h_head:hover {
 
 .footer_nine_area .footer_shap {
   position: absolute;
-  background: url("../img/home9/footer.png") no-repeat scroll center;
+  background: url("/img/home9/footer.png") no-repeat scroll center;
   left: 0;
   width: 100%;
   background-size: cover;
@@ -22996,13 +22996,13 @@ a .h_head:hover {
 .new_footer_top .footer_bg {
   position: absolute;
   bottom: 0;
-  background: url("../img/seo/footer_bg.png") no-repeat scroll center 0;
+  background: url("/img/seo/footer_bg.png") no-repeat scroll center 0;
   width: 100%;
   height: 266px;
 }
 
 .new_footer_top .footer_bg .footer_bg_one {
-  background: url("../img/seo/car.png") no-repeat center center;
+  background: url("/img/seo/car.png") no-repeat center center;
   width: 70px;
   height: 50px;
   position: absolute;
@@ -23013,7 +23013,7 @@ a .h_head:hover {
 }
 
 .new_footer_top .footer_bg .footer_bg_two {
-  background: url("../img/seo/bike.png") no-repeat center center;
+  background: url("/img/seo/bike.png") no-repeat center center;
   width: 50px;
   height: 52px;
   bottom: 0;
@@ -23062,7 +23062,7 @@ a .h_head:hover {
 }
 
 .sec_title p{
-  max-width: 570px;
+  /*max-width: 570px;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -23526,7 +23526,7 @@ a .h_head:hover {
   height: 560px;
   z-index: -1;
   left: 0;
-  background: url("../img/home-software/down_bg.png") no-repeat scroll;
+  background: url("/img/home-software/down_bg.png") no-repeat scroll;
   bottom: 0;
   background-size: cover;
 }
@@ -23804,7 +23804,7 @@ a .h_head:hover {
 /*============ tracking_activity_area css ==============*/
 .tracking_activity_area {
   padding-top: 115px;
-  background: #f6f6f6;
+  /*background: #f6f6f6;*/
 }
 
 .tracking_item img {
@@ -23984,7 +23984,7 @@ a .h_head:hover {
 
 .tracking_getting_area {
   text-align: center;
-  background: url("../img/home-tracking/cta_pattern_bg.jpg") no-repeat scroll center 0/cover;
+  background: url("/img/home-tracking/cta_pattern_bg.jpg") no-repeat scroll center 0/cover;
 }
 
 .tracking_getting_area h2 {
@@ -24661,7 +24661,7 @@ a .h_head:hover {
 
 .event_price_item:before {
   content: "";
-  background: url("../img/home-event/price_shap.png") no-repeat scroll center bottom;
+  background: url("/img/home-event/price_shap.png") no-repeat scroll center bottom;
   position: absolute;
   bottom: -22px;
   left: 0;
@@ -24742,7 +24742,7 @@ a .h_head:hover {
 }
 
 .event_fact_area .seo_fact_info:before {
-  background: url("../img/home-event/dot.png") no-repeat center center;
+  background: url("/img/home-event/dot.png") no-repeat center center;
 }
 
 .event_fact_area .seo_fact_info .seo_fact_item {
@@ -25166,7 +25166,7 @@ a .h_head:hover {
 }
 
 .chat_get_started_area {
-  background: url("../img/home-chat/get_started_bg.png") no-repeat scroll center bottom;
+  background: url("/img/home-chat/get_started_bg.png") no-repeat scroll center bottom;
   height: 712px;
   padding-top: 120px;
 }

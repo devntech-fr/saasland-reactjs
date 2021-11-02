@@ -1,10 +1,10 @@
 import React from "react";
-import Portfoliofull4col from "../sections/Portfolios/Portfoliofull4col";
+import PortfolioFull4Col from "sections/Portfolio/PortfolioFull4Col";
 
 function PortfolioColsSample() {
     return (
         <div className="body_wrapper">
-            <Portfoliofull4col/>
+            <PortfolioFull4Col/>
         </div>
     )
 }

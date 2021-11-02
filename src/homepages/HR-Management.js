@@ -1,23 +1,41 @@
 import React from 'react';
-import CustomNavbar from '../sections/CustomNavbar';
-import HRBanner from '../sections/Banner/HRBanner';
-import HRService from '../sections/Service/HRService';
-import ServiceData from '../sections/Service/ServiceData';
-import Video from '../sections/Video';
-import MarketingGetstarted from '../sections/MarketingGetstarted';
-import PrototypeFooter from '../sections/Footer/PrototypeFooter';
-import FooterData from '../sections/Footer/FooterData';
+import HRBanner from 'sections/Banner/HRBanner';
+import HRServices from 'sections/Service/HRServices';
+import ServiceData from 'sections/Service/ServiceData';
+import Video from 'sections/Media/Video';
+import MarketingGetStarted from 'sections/Banner/MarketingGetStarted';
+import Layout from "layouts/Layout";
+import HRServiceItem from "components/Service/HRServiceItem";
 
 const HRManagement = () => {
+    const services = ServiceData.HRService;
     return(
-        <div className="body_wrapper">
-            <CustomNavbar mClass="menu_four" nClass="w_menu"/>
-            <HRBanner/>
-            <HRService ServiceData={ServiceData}/>
+        <Layout variant={'hr'}>
+            <HRBanner
+                title={`<span>Build powerful apps</span> using the fastest API for messaging`}
+                p={`Walking on water and developing software from a specification are easy.`}
+            />
+
+            <HRServices>
+                {
+                    services.map((item, key) => {
+                        return(
+                            <div className="col-lg-4 col-sm-6" key={key}>
+                                <HRServiceItem
+                                    service={item}
+                                    index={item.id}
+                                />
+                            </div>
+                        )
+                    })
+                }
+            </HRServices>
             <Video/>
-            <MarketingGetstarted/>
-            <PrototypeFooter rclass={'payment_footer_area_two'} FooterData={FooterData}/>
-        </div>
+            <MarketingGetStarted/>
+        </Layout>
     )
 }
+
+const keywords = ['hr','home','human resources'];
+
 export default HRManagement;
