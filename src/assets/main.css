@@ -44,6 +44,7 @@ Table of Content:
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900");
 /*===== color =====*/
 /*====================================================*/
+@import './preloader.css';
 /*====================================================*/
 a {
   text-decoration: none !important;

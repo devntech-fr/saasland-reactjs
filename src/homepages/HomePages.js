@@ -20,29 +20,28 @@ import {Route, Switch} from "react-router-dom";
 
 function HomeSwitch({ match }) {
     console.log('match url',match.url)
-    if (match.url === "/home") {
-        let prefix = match.url;
-        return (
-            <Switch>
-                <Route path={prefix+"/marketing"} component={HomeMarketing} />
-                <Route path={prefix+"/app"} component={HomeAppShowcase} />
-                <Route path={prefix+"/chat"} component={HomeChat} />
-                <Route path={prefix+"/cloud"} component={HomeCloud} />
-                <Route path={prefix+"/crm"} component={HomeCRM} />
-                <Route path={prefix+"/erp"} component={HomeErp} />
-                <Route path={prefix+"/event"} component={HomeEvent} />
-                <Route path={prefix+"/software"} component={HomeSoftwareDark} />
-                <Route path={prefix+"/support"} component={HomeSupport} />
-                <Route path={prefix+"/tracking"} component={HomeTracking} />
-                <Route path={prefix+"/security"} component={HomeSecurity} />
-                <Route path={prefix+"/hosting"} component={HomeHosting} />
-                <Route path={prefix+"/management"} component={HRManagement} />
-                <Route path={prefix+"/landing"} component={Landing} />
-                <Route path={prefix+"/payment"} component={PaymentProcessing} />
-                <Route path={prefix+"/startup"} component={Startup} />
-            </Switch>
-        )
-    }
+    let prefix = match.url;
+    return (
+        <Switch>
+            <Route path={prefix+"/"} component={Home} />
+            <Route path={prefix+"/marketing"} component={HomeMarketing} />
+            <Route path={prefix+"/app"} component={HomeAppShowcase} />
+            <Route path={prefix+"/chat"} component={HomeChat} />
+            <Route path={prefix+"/cloud"} component={HomeCloud} />
+            <Route path={prefix+"/crm"} component={HomeCRM} />
+            <Route path={prefix+"/erp"} component={HomeErp} />
+            <Route path={prefix+"/event"} component={HomeEvent} />
+            <Route path={prefix+"/software"} component={HomeSoftwareDark} />
+            <Route path={prefix+"/support"} component={HomeSupport} />
+            <Route path={prefix+"/tracking"} component={HomeTracking} />
+            <Route path={prefix+"/security"} component={HomeSecurity} />
+            <Route path={prefix+"/hosting"} component={HomeHosting} />
+            <Route path={prefix+"/management"} component={HRManagement} />
+            <Route path={prefix+"/landing"} component={Landing} />
+            <Route path={prefix+"/payment"} component={PaymentProcessing} />
+            <Route path={prefix+"/startup"} component={Startup} />
+        </Switch>
+    )
 
 }
 

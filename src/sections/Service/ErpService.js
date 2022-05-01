@@ -2,11 +2,11 @@ import React from 'react';
 import SectionTitle from "sections/Title/SectionTitle";
 import ErpServiceItem from 'sections/Service/ErpServiceItem';
 
-const ErpService =({ children })=> {
+const ErpService =({ title, p, children })=> {
     return(
         <section className="erp_service_area sec_pad">
             <div className="container">
-                <SectionTitle sClass="hosting_title erp_title text-center" Title='Accessible, Convenient & Manageable' TitleP='The full monty burke posh excuse my French Richard cheeky bobby spiffing crikey Why gormless, pear shaped.!'/>
+                <SectionTitle sClass="hosting_title erp_title text-center" title={title} p={p}/>
                 <div className="row">
                     {children}
                 </div>

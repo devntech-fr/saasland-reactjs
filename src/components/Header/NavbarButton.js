@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext, themes } from "themes/ThemeContext";
+import { ThemeContext } from "themes/ThemeContext";
 
 function NavbarButton({ href, target, label }) {
 
-    const getThemeClass = () => {
+    const getThemeClass = (theme_name) => {
         return 'menu_cus';
     }
 
@@ -13,7 +13,7 @@ function NavbarButton({ href, target, label }) {
             {(theme) => {
                 console.log('theme',theme);
                 return (
-                    <a className={`btn_get btn_hover ${getThemeClass()}`} href={href} target={target}>{label}</a>
+                    <a className={`btn_get btn_hover ${getThemeClass(theme.current)}`} href={href} target={target}>{label}</a>
                 )
             }}
         </ThemeContext.Consumer>

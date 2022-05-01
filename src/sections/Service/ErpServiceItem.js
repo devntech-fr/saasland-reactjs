@@ -1,18 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class ErpServiceItem extends Component {
-    render(){
-        let {sTitle, pText, icon, itemClass} =this.props;
-        return(
-            <div className="col-lg-4 col-sm-6">
-                <div className={`erp_service_item ${itemClass}`}>
-                    <img src={"/img/erp-home/" + icon} alt=""/>
-                    <a href="/#"><h3 className="h_head">{sTitle}</h3></a>
-                    <p>{pText}</p>
-                </div>
+function ErpServiceItem({ service, key }) {
+    const {title, p, icon, itemClass} = service;
+    return(
+        <div className="col-lg-4 col-sm-6" key={key}>
+            <div className={`erp_service_item ${itemClass}`}>
+                <img src={"/img/erp-home/" + icon} alt=""/>
+                <a href="/#"><h3 className="h_head">{title}</h3></a>
+                <p>{p}</p>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default ErpServiceItem;

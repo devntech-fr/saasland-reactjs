@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 
-function NavbarLink({ href, label, submenu, megaMenu, isActive, children }) {
+function NavbarLink({ href, label, submenu, megaMenu, isActive, index, children }) {
     return (
-        <li className={`nav-item${submenu ? ` dropdown submenu` : ''}${megaMenu ? ` mega_menu mega_menu_two` : ''}${isActive ? ` active` : ''}`}>
+        <li className={`nav-item${submenu ? ` dropdown submenu` : ''}${megaMenu ? ` mega_menu mega_menu_two` : ''}${isActive ? ` active` : ''}`} key={index}>
             <Link
                 to={href}
                 className={`nav-link${submenu ? ` dropdown-toggle` : ''}`}

@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 function MainMenu({ navbarLinks }) {
     const routeMatch = useRouteMatch();
+    console.log('navbarLinks',navbarLinks);
 
     useEffect(() => {
         console.log('routeMatch',routeMatch);
@@ -12,13 +13,13 @@ function MainMenu({ navbarLinks }) {
 
     const showLinks = () => {
         return navbarLinks.map((link, key) => (
-            <NavbarLink label={link.label} href={link.href} isActive={routeMatch.path === link.href}/>
+            <NavbarLink label={link.label} href={link.href} isActive={routeMatch.path === link.href} index={key}/>
         ))
     }
 
     return (
         <React.Fragment>
-            {showLinks()}
+            {showLinks}
         </React.Fragment>
     )
 }

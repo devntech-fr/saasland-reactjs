@@ -5,7 +5,6 @@ import Erp from "themes/erp";
 import Support from "themes/support";
 
 export const themes = {
-    default: Marketing,
     marketing: Marketing,
     application: Application,
     chat: {
@@ -56,7 +55,9 @@ export const variants = [
     'startup'
 ];
 
-function changeTheme() {}
+function changeTheme(name) {
+    return themes[name];
+}
 
 export const ThemeContext = React.createContext({
     current: 'marketing',

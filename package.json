@@ -5,11 +5,13 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.3.1",
+    "d3": "^7.2.1",
     "google-maps-react": "^2.0.2",
     "history": "^4.10.1",
     "http-proxy-middleware": "^1.0.1",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.4.1",
+    "moment": "^2.29.1",
     "popper.js": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

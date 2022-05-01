@@ -217,7 +217,7 @@ const ServiceData = {
         {
             id: '01',
             icon: 'ti-settings one',
-            title: 'Premium plugins',
+            title: 'Développement et automatisation',
             p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
             button: {
                 label : 'Learn More',
@@ -230,7 +230,7 @@ const ServiceData = {
         {
             id: '02',
             icon: 'ti-heart-broken two',
-            title: 'Premium plugins',
+            title: 'Maintenance et suivi',
             p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
             button: {
                 label : 'Learn More',
@@ -243,7 +243,7 @@ const ServiceData = {
         {
             id: '03',
             icon: 'ti-target  three',
-            title: 'Live page builder',
+            title: 'Ciblage et référencement',
             p: "Oxford jolly good cras bugger down the pub blow off well arse tinkety tonk old fruit William bite your arm off haggle, old it's all gone to pot daft no biggie bog.!",
             button: {
                 label : 'Learn More',

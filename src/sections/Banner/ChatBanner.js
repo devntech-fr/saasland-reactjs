@@ -1,7 +1,69 @@
 import React from "react";
 import { displayTitle } from "components/Content/RichContent";
 
-const ChatBanner = ({ title }) => {
+let ChatBannerType = {
+  images: {
+    before: [
+      {
+        id: 1,
+        src: '/img/home-chat/cloud.png',
+        alt: '',
+      },
+      {
+        id: 2,
+        src: '/img/home-chat/left_leaf.png',
+        alt: '',
+      },
+      {
+        id: 3,
+        src: '/img/home-chat/right_leaf.png',
+        alt: '',
+      },
+    ],
+    after: [
+      {
+        id: 1,
+        src: '/img/home-chat/panguin_img_one.png',
+        alt: ''
+      },
+      {
+        id: 2,
+        src: '/img/home-chat/panguin_img_two.png',
+        alt: ''
+      },
+      {
+        id: 3,
+        src: '/img/home-chat/panguin_img_three.png',
+        alt: ''
+      },
+    ],
+    end: [
+      {
+        id: 1,
+        src: '/img/home-chat/Messages.png',
+        alt: ''
+      }
+    ]
+  },
+  rounds: 3,
+  tag: {
+    image: {
+      src: "/img/home-chat/live_chat.png",
+      alt: '',
+      title: ''
+    },
+    label: 'Live chat'
+  },
+  title: `Engage your website visitors using Live Chat`,
+  button: {
+    href: '/#',
+    target: '_blank',
+    label: 'Live chat for free'
+  },
+  span: '(No credit card required)'
+}
+
+const ChatBanner = ({ images, rounds, tag, title, button, span }) => {
   return (
     <section className="chat_banner_area">
       <img

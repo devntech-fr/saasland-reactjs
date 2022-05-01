@@ -2,12 +2,14 @@ import React from "react";
 import SeoTitle from "sections/Title/SeoTitle";
 import StudySlider from "sections/Product/StudySlider";
 
-function CaseStudies() {
+function CaseStudies({ title, p, case_collection }) {
     return (
-        <section className="case_studies_area sec_pad">
+        <section className="case_studies_area sec_pad" id="#portfolio">
             <div className="container">
-                <SeoTitle Title="Our case studies" TitleP="The full monty burke posh excuse my French Richard cheeky bobby spiffing crikey Why gormless, pear shaped.!"/>
-                <StudySlider/>
+                <SeoTitle title={title} p={p}/>
+                <StudySlider
+                    cases={case_collection}
+                />
             </div>
         </section>
     )

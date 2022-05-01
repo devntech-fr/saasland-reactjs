@@ -11,16 +11,17 @@ import NotFound from "Pages/404";
 import TestimonialsSectionsSample from "sample-pages/TestimonialsSectionsSample";
 import HomePages from "homepages/HomePages";
 import ScrollToTopRoute from "ScrollToTopRoute";
+import DevntechHome from "projects/devntech/Home";
 
 class App extends Component {
   componentDidMount() {
-    this.props.hideLoader();
   }
   render() {
     return (
       <Router>
         <Switch>
-          <ScrollToTopRoute exact={true} path={"/"} component={Home.marketing} />
+          <ScrollToTopRoute exact={true} path={"/"} component={HomePages.default} />
+          <ScrollToTopRoute path={"/devntech"} component={DevntechHome} />
           <ScrollToTopRoute path={"/themes"} component={HomePages.default} />
           <ScrollToTopRoute path={"/sample-pages"} component={TestimonialsSectionsSample} />
           <ScrollToTopRoute path="/price" component={Price} />
