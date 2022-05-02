@@ -2,6 +2,7 @@ import React from 'react';
 import Reveal from 'react-reveal/Reveal/';
 import PropTypes from 'prop-types';
 import AboutButton from "../../components/About/AboutButton";
+import Image from "types/Image";
 
 const DesignBanner = ({ title, p, buttons, image, bubbles }) => {
     return(
@@ -27,7 +28,7 @@ const DesignBanner = ({ title, p, buttons, image, bubbles }) => {
                             <Reveal effect="fadeInUp" duration={1000}><p className="wow fadeInUp" data-wow-delay="0.5s">{p}</p></Reveal>
                             {
                                 buttons?.map((btn, key) => (
-                                    <Reveal effect="fadeInLeft" duration={1200}><a href={btn.href} className={btn.classNames}>{btn.label}</a></Reveal>
+                                    <Reveal effect="fadeInLeft" duration={1200} key={key}><a href={btn.href} className={btn.classNames}>{btn.label}</a></Reveal>
                                 ))
                             }
                         </div>
@@ -45,6 +46,6 @@ DesignBanner.propTypes = {
     p: PropTypes.string,
     getStartedButton: PropTypes.instanceOf(AboutButton),
     learnMoreButton: PropTypes.instanceOf(AboutButton),
-    image: PropTypes.string
+    image: PropTypes.shape(Image)
 }
 export default DesignBanner;

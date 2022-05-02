@@ -39,21 +39,40 @@ class Portfolio2Grid extends Component{
 
     onActive = v => v === this.state.activeItem ? 'active' : '';
 
+    showFilters = () => {
+        return this.props.filters?.map((filter, key) => {
+            console.log('filter',filter);
+            return (
+                <div data-filter={filter.name} className={`work_portfolio_item ${this.onActive(filter.name)}`} onClick={() => {this.onFilterChange(filter.name)}} key={key}>{filter.label}</div>
+            )
+        })
+    }
+
+    showGridItems = () => {
+        return this.props.posts?.map((post, key) => {
+            console.log('post',post);
+            return (
+                <Portfolio2GridItem
+                    colClass={post.colClass}
+                    image={post.image}
+                    title={post.title}
+                    tags={post.tags}
+                />
+            )
+        })
+    }
+
     render(){
         return(
             <section className="portfolio_area sec_pad bg_color">
                 <div className="container">
                     <div id="portfolio_filter" className="portfolio_filter mb_50">
                         <div data-filter="*" className={`work_portfolio_item ${this.onActive('*')}`} onClick={() => {this.onFilterChange("*")}}>All</div>
-                        <div data-filter="brand" className={`work_portfolio_item ${this.onActive('web')}`} onClick={() => {this.onFilterChange("brand")}}>Branding</div>
-                        <div data-filter="develop" className={`work_portfolio_item ${this.onActive('develop')}`} onClick={() => {this.onFilterChange("develop")}}>Development</div>
-                        <div data-filter="web" className={`work_portfolio_item ${this.onActive('web')}`} onClick={() => {this.onFilterChange("web")}}>Web Design</div>
-                        <div data-filter="fashion" className={`work_portfolio_item ${this.onActive('fashion')}`} onClick={() => {this.onFilterChange("fashion")}}>Fashion</div>
-                        <div data-filter="ux" className={`work_portfolio_item ${this.onActive('ux')}`} onClick={() => {this.onFilterChange("ux")}}>UI/UX</div>
-                        <div data-filter="product" className={`work_portfolio_item ${this.onActive('product')}`} onClick={() => {this.onFilterChange("product")}}>Product</div>
+                        {this.showFilters()}
                     </div>
                     <div className="row portfolio_gallery mb_30" id="work-portfolio">
-                        <Portfolio2GridItem colClass="col-lg-6 web fashion" pImg="2-columns/grid1.jpg" ptitle="Apple Mobile Mockup" tOne="Web" tTwo="Fashion"/>
+                        {this.showGridItems()}
+                        <Portfolio2GridItem colClass="col-lg-6 web fashion" pImg="/2-columns/grid1.jpg" ptitle="Apple Mobile Mockup" tOne="Web" tTwo="Fashion"/>
                         <Portfolio2GridItem colClass="col-lg-6 develop" pImg="2-columns/grid2.jpg" ptitle="Interior Design" tOne="Develop"/>
                         <Portfolio2GridItem colClass="col-lg-6 web" pImg="2-columns/grid3.jpg" ptitle="Portfolio Center Slider" tOne="Web" tTwo="Fashion"/>
                         <Portfolio2GridItem colClass="col-lg-6 fashion" pImg="2-columns/grid4.jpg" ptitle="Portfolio Masonry" tOne="fashion"/>

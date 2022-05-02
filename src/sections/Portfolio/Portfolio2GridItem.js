@@ -3,20 +3,21 @@ import {Link} from 'react-router-dom';
 
 class Portfolio2GridItem extends Component{
     render(){
-        var {pImg, ptitle, tOne, tTwo, colClass } = this.props;
+        var {image, title, tags, colClass } = this.props;
         return(
             <div className={`portfolio_item mb-30 ${colClass} `}>
                 <div className="portfolio_img">
-                    <img src={require("../../img/portfolio/" + pImg)} alt=""/>
+                    <img src={"/img/portfolio/" + image} alt=""/>
                     <div className="hover_content">
                         <a href=".#" className="img_popup leaf"><i className="ti-plus"></i></a>
                         <div className="portfolio-description leaf">
                             <Link to="/Pages/PortfolioSingle" className="portfolio-title">
-                                <h3 className="f_500 f_size_20 f_p">{ptitle}</h3>
+                                <h3 className="f_500 f_size_20 f_p">{title}</h3>
                             </Link>
                             <div className="links">
-                                <a href=".#">{tOne}</a>
-                                <a href=".#">{tTwo}</a>
+                                {tags?.map((tag, key) => (
+                                    <a href=".#" key={key}>{tag}</a>
+                                ))}
                             </div>
                         </div>
                     </div>

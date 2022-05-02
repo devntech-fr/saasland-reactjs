@@ -1,46 +1,17 @@
 import React from 'react';
-import Header from 'components/Header/Header';
+import Layout from "projects/devntech/Layout";
 import DesignBanner from 'sections/Banner/DesignBanner';
 import Services from 'sections/Service/Services';
 import ServiceData from "sections/Service/ServiceData";
-import Testimonial from 'sections/Testimonial/Testimonials';
 import SeoFact from "sections/Fact/SeoFact";
 import SeoPartnerLogo from "sections/PartnerLogo/SeoPartnerLogo";
 import SeoAction from "sections/CallToAction/SeoAction";
 import CaseStudies from "sections/CaseStudy/CaseStudies";
-import Footer from 'sections/Footer/Footer';
-import ErpServiceItem from 'sections/Service/ErpServiceItem';
 
 function DevntechHome() {
-    const ServiceSection = Services.erp;
+    const ServiceSection = Services.hostingService;
     return (
-        <div className="body_wrapper">
-            <Header 
-                sticky={true} 
-                variant={'primary'}
-                navigationLinks={[
-                    {
-                        label: 'Accueil',
-                        href: '/devntech',
-                        isActive: false
-                    },
-                    {
-                        label: 'Services',
-                        href: '/devntech/#work',
-                        isActive: false
-                    },
-                    {
-                        label: `Réalisations`,
-                        href: '/devntech/#portfolio',
-                        isActive: false
-                    },
-                    {
-                        label: `Contact`,
-                        href: '/devntech/contact',
-                        isActive: false
-                    },
-                ]}
-            />
+        <Layout>
             <DesignBanner
                 title={`Développement d'applications web et mobile sur mesure`}
                 p={`pour les PME, les commerces de proximité, les artisans et les professions libérales.`}
@@ -63,13 +34,11 @@ function DevntechHome() {
                 }}
                 bubbles={false}
             />
-            <ServiceSection 
+            <ServiceSection
                 title={`Services sur mesure`}
                 p={`Chaque projet client est unique, c'est pourquoi nous accordons une grande importance à notre premier échange pour adapter nos services à vos besoins.`}
                 services={ServiceData.work}
-            >
-                {ServiceData.work.map((service, key) => <ErpServiceItem service={service} key={key} />)}
-            </ServiceSection>
+            />
             <CaseStudies
                 title={`Réalisations sur mesure`}
                 p={`Chaque projet a été réalisé intégralement avec des outils open-source respectueux des données.`}
@@ -193,10 +162,7 @@ function DevntechHome() {
                     classNames: 'about_btn'
                 }}
             />
-            <Footer
-                copywrite={`© Dev'nTech SASU 2021 All rights reserved.`}
-            />
-        </div>
+        </Layout>
     )
 }
 

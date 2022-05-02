@@ -25,11 +25,11 @@ function Header({ sticky, navbarClass, navListClass, containerClass, btnClass, v
     if (sticky) {
         return (
             <Sticky top={0} innerZ={9999} activeClass="navbar_fixed">
-                <HeaderArea 
-                    sticky={sticky} 
-                    navListClassname={navListClassname} 
-                    navbarButton={navbarButton} 
-                    containerClassname={containerClassname} 
+                <HeaderArea
+                    sticky={sticky}
+                    navListClassname={navListClassname}
+                    navbarButton={navbarButton}
+                    containerClassname={containerClassname}
                     navbarClassname={navbarClassname}
                     navigationLinks={navigationLinks}
                 />
@@ -38,11 +38,11 @@ function Header({ sticky, navbarClass, navListClass, containerClass, btnClass, v
     }
 
     return (
-        <HeaderArea 
-            sticky={sticky} 
-            navListClassname={navListClassname} 
-            navbarButton={navbarButton} 
-            containerClassname={containerClassname} 
+        <HeaderArea
+            sticky={sticky}
+            navListClassname={navListClassname}
+            navbarButton={navbarButton}
+            containerClassname={containerClassname}
             navigationLinks={navigationLinks}
         />
     )
@@ -51,19 +51,19 @@ function Header({ sticky, navbarClass, navListClass, containerClass, btnClass, v
 function HeaderArea({ sticky, navListClassname, navbarButton, containerClassname, navigationLinks }) {
 
     const showLinks = () => {
-        return navigationLinks.map((link, key) => {
+        return navigationLinks?.map((link, key) => {
             console.log('link',link);
             const { submenu, megaMenu, isActive, label, href } = link;
             return (
                 <NavbarLink
-                    href={href} 
-                    label={label} 
-                    submenu={submenu} 
-                    megaMenu={megaMenu} 
-                    isActive={isActive} 
-                    index={key}
+                    href={href}
+                    label={label}
+                    submenu={submenu}
+                    megaMenu={megaMenu}
+                    isActive={isActive}
+                    key={key}
                 />
-                
+
             )
         })
     }

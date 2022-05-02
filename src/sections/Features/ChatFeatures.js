@@ -6,12 +6,12 @@ class ChatFeatures extends Component {
       img1,
       img2,
       img3,
-      rowClass,
+      reverse,
       col1,
       col2,
       url,
-      titleSmall,
-      titlebig,
+      boldtitle,
+      title,
       p,
       icon,
       pClass
@@ -19,7 +19,7 @@ class ChatFeatures extends Component {
     return (
       <section className="chat_features_area">
         <div className="container">
-          <div className={`row align-items-center ${rowClass}`}>
+          <div className={`row align-items-center ${reverse && `flex-row-reverse`}`}>
             <div className={col1}>
               <div className="chat_features_img chat_features_img_one">
                 <img
@@ -45,7 +45,7 @@ class ChatFeatures extends Component {
               <div className={`chat_features_content ${pClass}`}>
                 <img src={"/img/home-chat/" + icon} alt="" />
                 <h2>
-                  <span>{titleSmall}</span> {titlebig}
+                  <span>{boldtitle}</span> {title}
                 </h2>
                 <p>{p}</p>
                 <a href={url}>Learn more</a>
