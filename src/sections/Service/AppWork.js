@@ -1,12 +1,17 @@
-import React,{Component} from 'react';
+import React from 'react';
 import SectionTitle from "sections/Title/SectionTitle";
 
 function AppWork({ title, p, services }) {
-    
+
     return(
         <section className="app_service_area" id="work">
             <div className="container">
-                <SectionTitle sClass="sec_title text-center mb_70" title={title} tClass="t_color3" p={p}/>
+                <SectionTitle
+                    sClass="sec_title text-center mb_70"
+                    title={title}
+                    tClass="t_color3"
+                    p={p}
+                />
                 <div className="row app_service_info">
                     {
                         services.map(item => {

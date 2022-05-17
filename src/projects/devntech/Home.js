@@ -7,6 +7,7 @@ import SeoFact from "sections/Fact/SeoFact";
 import SeoPartnerLogo from "sections/PartnerLogo/SeoPartnerLogo";
 import SeoAction from "sections/CallToAction/SeoAction";
 import CaseStudies from "sections/CaseStudy/CaseStudies";
+import HostingService from "sections/Service/HostingService";
 
 function DevntechHome() {
     const ServiceSection = Services.hostingService;
@@ -34,10 +35,47 @@ function DevntechHome() {
                 }}
                 bubbles={false}
             />
-            <ServiceSection
+            <HostingService
                 title={`Services sur mesure`}
                 p={`Chaque projet client est unique, c'est pourquoi nous accordons une grande importance à notre premier échange pour adapter nos services à vos besoins.`}
-                services={ServiceData.work}
+                services={[
+                    {
+                        id: 1,
+                        title: 'Back-end & API',
+                        description: 'Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse.',
+                        icon: 'icon1.png'
+                    },
+                    {
+                        id: 2,
+                        title: 'Front-end & app',
+                        description: 'Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse.',
+                        icon: 'icon2.png'
+                    },
+                    {
+                        id: 3,
+                        title: 'PWA',
+                        description: 'Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse.',
+                        icon: 'icon3.png'
+                    },
+                    {
+                        id: 4,
+                        title: 'Automatisation',
+                        description: 'Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse.',
+                        icon: 'icon4.png'
+                    },
+                    {
+                        id: 5,
+                        title: 'Suivi technique',
+                        description: 'Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse.',
+                        icon: 'icon5.png'
+                    },
+                    {
+                        id: 6,
+                        title: 'Partage open-source',
+                        description: 'Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse.',
+                        icon: 'icon6.png'
+                    },
+                ]}
             />
             <CaseStudies
                 title={`Réalisations sur mesure`}
@@ -103,6 +141,21 @@ function DevntechHome() {
                             },
                         ],
                     },
+                    {
+                        id: 4,
+                        image: '../img/seo/studies_img_two.jpg',
+                        title: 'Seren\'nVet',
+                        tags: [
+                            {
+                                href: '/#',
+                                name: 'wordpress'
+                            },
+                            {
+                                href: '/#',
+                                name: 'php'
+                            },
+                        ],
+                    },
                 ]}
             />
             <SeoFact
@@ -155,10 +208,10 @@ function DevntechHome() {
                 ]}
             />
             <SeoAction
-                title={`Besoin d'une estimation pour votre projet ?<br/> C'est simple et rapide !`}
+                title={`Besoin d'une estimation pour votre projet ?<br/> C'est simple, rapide et gratuit !`}
                 button={{
                     href: '/#',
-                    label: 'Demander un devis gratuit',
+                    label: 'Demander un devis maintenant',
                     classNames: 'about_btn'
                 }}
             />

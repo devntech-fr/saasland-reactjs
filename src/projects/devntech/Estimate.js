@@ -5,7 +5,7 @@ import Layout from "projects/devntech/Layout";
 function EstimatePage() {
     return (
         <Layout>
-            <Breadcrumb breadcrumbClass="breadcrumb_area" imgName="breadcrumb/banner_bg.png" title="Our services" description="Why I say old chap that is spiffing off his nut arse pear shaped plastered Jeffrey bodge barney some dodgy.!!"/>
+            <Breadcrumb breadcrumbClass="breadcrumb_area" imgName="breadcrumb/banner_bg.png" title="Demande de devis" description="Afin d'estimer votre projet au plus juste, nous avons besoins de quelques informations."/>
         </Layout>
     )
 }

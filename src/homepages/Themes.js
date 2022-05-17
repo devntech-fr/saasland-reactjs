@@ -18,11 +18,7 @@ import Startup from "homepages/Startup";
 
 export default {
     default: Home,
-    marketing: {
-        NavbarButton: {
-            className: `menu_cus`
-        }
-    },
+    marketing: HomeMarketing,
     app: HomeAppShowcase,
     chat: HomeChat,
     cloud: HomeCloud,
@@ -34,7 +30,7 @@ export default {
     erp: HomeErp,
     hosting: HomeHosting,
     security: HomeSecurity,
-    hr: HRManagement,
+    hrm: HRManagement,
     landing: Landing,
     payment: PaymentProcessing,
     startup: Startup

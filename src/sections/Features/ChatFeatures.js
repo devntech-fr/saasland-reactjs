@@ -3,9 +3,7 @@ import React, { Component } from "react";
 class ChatFeatures extends Component {
   render() {
     let {
-      img1,
-      img2,
-      img3,
+      parallaxImages,
       reverse,
       col1,
       col2,
@@ -22,28 +20,22 @@ class ChatFeatures extends Component {
           <div className={`row align-items-center ${reverse && `flex-row-reverse`}`}>
             <div className={col1}>
               <div className="chat_features_img chat_features_img_one">
-                <img
-                  className="p_absolute dot_bg"
-                  src={"/img/home-chat/" + img1}
-                  alt=""
-                />
-                <img
-                  className="chat_one"
-                  data-parallax='{"x": 0, "y": 80}'
-                  src={"/img/home-chat/" + img2}
-                  alt=""
-                />
-                <img
-                  className="p_absolute chat_two"
-                  data-parallax='{"x": 0, "y": -80}'
-                  src={"/img/home-chat/" + img3}
-                  alt=""
-                />
+                {
+                  parallaxImages && parallaxImages.map((image, key) => (
+                        <img
+                            className={image.classNames}
+                            src={image.src}
+                            alt={image.alt}
+                            title={image.alt}
+                            data-parallax={`{"x": ${image.parallax.x}, "y": ${image.parallax.y}`}
+                        />
+                    ))
+                }
               </div>
             </div>
             <div className={col2}>
               <div className={`chat_features_content ${pClass}`}>
-                <img src={"/img/home-chat/" + icon} alt="" />
+                <img src={icon} alt="" />
                 <h2>
                   <span>{boldtitle}</span> {title}
                 </h2>

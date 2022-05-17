@@ -6,22 +6,9 @@ import Support from "themes/support";
 
 export const themes = {
     marketing: Marketing,
-    application: Application,
-    chat: {
-        NavbarButton: {
-            className: `menu_cus`
-        }
-    },
-    cloud: {
-        NavbarButton: {
-            className: `btn_get_radious menu_custfive`
-        },
-        DeveloperTab: {
-            NavTabs: {
-                className: `develor_tab mb-30`
-            }
-        }
-    },
+    app: Application,
+    chat: {},
+    cloud: {},
     crm: {},
     event: {},
     software: {},
@@ -30,7 +17,7 @@ export const themes = {
     erp: Erp,
     hosting: {},
     security: {},
-    management: {},
+    hrm: {},
     landing: {},
     payment: {},
     startup: {},
@@ -38,7 +25,7 @@ export const themes = {
 
 export const variants = [
     'marketing',
-    'application',
+    'app',
     'chat',
     'cloud',
     'crm',
@@ -49,7 +36,7 @@ export const variants = [
     'software',
     'support',
     'tracking',
-    'management',
+    'hrm',
     'landing',
     'payment',
     'startup'
@@ -60,9 +47,10 @@ function changeTheme(name) {
 }
 
 export const ThemeContext = React.createContext({
-    current: 'marketing',
+    current: '',
     default: 'marketing',
-    theme: themes.marketing,
+    themes: themes,
+    variants: variants,
     changeTheme: changeTheme(),
 });
 ThemeContext.displayName = 'SaasLand variant';

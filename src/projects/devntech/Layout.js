@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "components/Header/Header";
 import Footer from "sections/Footer/Footer";
+import 'assets/main.css'
 
 function Layout({ children }) {
     return (

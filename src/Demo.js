@@ -1,20 +1,25 @@
-import React from "react";
-import {BrowserRouter as Router, Route, Switch, useHistory} from "react-router-dom";
-/*------ Pages-----*/
-import NotFound from "Pages/404";
-import ScrollToTopRoute from "ScrollToTopRoute";
-import PsychomotRouter from "projects/PsychomotRouter";
+import React, {useEffect, useState} from "react";
+import {Route, Switch, useHistory, Link} from "react-router-dom";
+import Themes from "homepages/Themes";
 
 function Demo() {
     let history = useHistory();
+    const [demos, setDemos] = useState(Themes);
+
+    useEffect(() => {
+        Object.keys(demos).forEach((theme, key) => {
+            console.log('theme',theme);
+        });
+    },[demos]);
+
+    const demoRoutes = () => {
+        return Object.keys(demos).map((theme, key) => <Route exact={true} path={`/demo/${theme}`} component={Themes[theme]} key={key} />);
+    }
 
     return (
-        <Router history={history}>
-            <Switch>
-                <Route exact={true} path={"/"} component={PsychomotRouter} />
-                <ScrollToTopRoute component={NotFound} />
-            </Switch>
-        </Router>
+        <Switch>
+            {demoRoutes()}
+        </Switch>
     )
 }
 

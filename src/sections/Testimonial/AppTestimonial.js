@@ -7,43 +7,44 @@ class AppTestimonial extends Component{
         this.previous = this.previous.bind(this);
     }
     next() {
-    this.slider.slickNext();
+        this.slider.slickNext();
     }
     previous() {
-    this.slider.slickPrev();
+        this.slider.slickPrev();
     }
     renderTestimonials() {
         const testimonials = this.props.testimonials;
-        if (testimonials.length > 0) {
-            return testimonials.map((testimonial, key) => {
-                console.log('testi',testimonial);
-                return (
-                    <div className="app_testimonial_item text-center" key={key}>
-                        <div className="author-img"><img src={'/img/home7/testimonial_author_img.png'} alt=""/></div>
-                        <div className="author_info">
-                            <h6 className="f_p f_500 f_size_18 t_color3 mb-0">Lurch Schpellchek</h6>
-                            <p>UI/UX designer</p>
-                        </div>
-                        <p className="f_400">What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, haggle young delinquent say so I said bite your arm off easy peasy. Skive off it's all gone to pot buggered.</p>
-                    </div>
-                )
-            })
+        if (testimonials.length <= 0) {
+            return;
         }
+        return testimonials.map((testimonial, key) => {
+            console.log('testi',testimonial);
+            return (
+                <div className="app_testimonial_item text-center" key={key}>
+                    <div className="author-img"><img src={testimonial.image.src} alt=""/></div>
+                    <div className="author_info">
+                        <h6 className="f_p f_500 f_size_18 t_color3 mb-0">{testimonial.name}</h6>
+                        <p>{testimonial.company}</p>
+                    </div>
+                    <p className="f_400">{testimonial.comment}</p>
+                </div>
+            )
+        })
     }
-   render(){
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-    return(
-        <section className="app_testimonial_area" id="testimonial">
-            <div className="text_shadow" data-line="Feedback"></div>
+    render(){
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        };
+        return(
+            <section className="app_testimonial_area" id="testimonial">
+                <div className="text_shadow" data-line="Feedback"></div>
                 <div className="container nav_container">
                     <div className="slider_nav">
                         <i className="ti-arrow-left prev" onClick={this.previous}></i>
@@ -57,6 +58,6 @@ class AppTestimonial extends Component{
                 </div>
             </section>
         )
-   }
+    }
 }
 export default AppTestimonial;
