@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 import {Link} from 'react-scroll';
 import Sticky from 'react-stickynode';
+import PropTypes from "prop-types";
+import CallToActionButton from "types/CallToActionButton";
 
 class OnePageMenu extends Component {
     render() {
-        var {mClass, nClass, cClass, slogo, hbtnClass} =this.props;
+        var {navbarClass, navListClass, containerClass, logoClass, ctaBtnClass} =this.props;
         return (
             <Sticky top={0} innerZ={9999} activeClass="navbar_fixed">
                 <header className="header_area">
-                <nav className={`navbar navbar-expand-lg menu_one ${mClass}`}>
-                    <div className={`container ${cClass}`}>
-                        <Link className={`navbar-brand ${slogo}`} to="/">
+                <nav className={`navbar navbar-expand-lg menu_one ${navbarClass}`}>
+                    <div className={`container ${containerClass}`}>
+                        <Link className={`navbar-brand ${logoClass}`} to="/">
                             <img src={"/img/logo2.png"} alt=""/>
                             <img src={"/img/logo.png"} alt="logo"/>
                         </Link>
@@ -29,7 +31,7 @@ class OnePageMenu extends Component {
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className={`navbar-nav menu ml-auto ${nClass}`}>
+                            <ul className={`navbar-nav menu ml-auto ${navListClass}`}>
                                 <li className="nav-item">
                                     <Link className="nav-link" activeClass="active" to="home" spy={true} smooth={true} offset={0} duration={500}>Home</Link>
                                 </li>
@@ -49,7 +51,7 @@ class OnePageMenu extends Component {
                                     <Link className="nav-link" activeClass="active" to="team" spy={true} smooth={true} offset={-90} duration={1000}>Team</Link>
                                 </li>
                             </ul>
-                            <a className={`btn_get btn_hover ${hbtnClass}`} href="#get-app">Get Started</a>
+                            <a className={`btn_get btn_hover ${ctaBtnClass}`} href="#get-app">Get Started</a>
                         </div>
                     </div>
                 </nav>
@@ -60,3 +62,17 @@ class OnePageMenu extends Component {
 }
 
 export default OnePageMenu;
+
+OnePageMenu.propTypes = {
+    navbarClass: PropTypes.string.isRequired,
+    containerClass: PropTypes.string.isRequired,
+    navListClass: PropTypes.string,
+    sticky: PropTypes.bool,
+    navbarButton: PropTypes.shape(CallToActionButton),
+}
+
+OnePageMenu.defaultProps = {
+    navbarClass: 'menu_four',
+    containerClass: 'custom_container p0',
+    sticky: true
+}

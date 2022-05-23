@@ -13,12 +13,49 @@ function Layout({ variant, children }) {
     console.log('theme:',theme);
     return (
         <div className="body_wrapper">
-            <Header sticky>
-                <Menu />
-            </Header>
-            <CustomNavbar sticky>
-                <Menu />
-            </CustomNavbar>
+            <Header
+                sticky={true}
+                navigationLinks={[
+                    {
+                        label: 'Accueil',
+                        href: '/',
+                        isActive: false
+                    },
+                    {
+                        label: 'Services',
+                        href: '/services',
+                        isActive: false
+                    },
+                    {
+                        label: 'Produits',
+                        href: '/produits',
+                        isActive: false,
+                        hasSubmenu: true,
+                        submenu: [
+                            {
+                                label: 'Applications',
+                                href: '/applications',
+                                isActive: false
+                            },
+                            {
+                                label: 'Intégrations',
+                                href: '/integrations',
+                                isActive: false
+                            },
+                        ]
+                    },
+                    {
+                        label: `Réalisations`,
+                        href: '/realisations',
+                        isActive: false
+                    },
+                    {
+                        label: `Contact`,
+                        href: '/contact',
+                        isActive: false
+                    },
+                ]}
+            />
             {children}
             <FooterTwo FooterData={FooterData}/>
         </div>

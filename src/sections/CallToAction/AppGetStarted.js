@@ -1,8 +1,12 @@
 import React from 'react';
 import Reveal from 'react-reveal';
+import PropTypes from "prop-types";
+import Image from 'types/Image';
+import CallToActionButton from "types/CallToActionButton";
+
 const AppGetStarted = ({ title, subtitle, p, buttons, image }) => {
     const showButtons = () => {
-        if (!buttons) {
+        if (undefined === buttons || buttons.length === 0) {
             return (
                 <>
                     <a href=".#" className="app_btn app_btn_one wow fadeInLeft" data-wow-delay="0.5s"><img src={'/img/home7/google_icon.png'} alt=""/>Google Play</a>
@@ -48,11 +52,8 @@ const AppGetStarted = ({ title, subtitle, p, buttons, image }) => {
                     <div className="col-lg-6 d-flex align-items-center">
                         <Reveal bottom cascade>
                             <div className="get_content">
-                                {!subtitle && <h3 className="f_400 f_p wow fadeInLeft" data-wow-delay="0.2s">SaasLand</h3>}
                                 {subtitle && <h3 className="f_400 f_p wow fadeInLeft" data-wow-delay="0.2s">{subtitle}</h3>}
-                                {!title && <h2 className="f_700 f_p f_size_40 l_height50 mb_20 wow fadeInLeft" data-wow-delay="0.3s">Download this app Now</h2>}
                                 {title && <h2 className="f_700 f_p f_size_40 l_height50 mb_20 wow fadeInLeft" data-wow-delay="0.3s">{title}</h2>}
-                                {!p && <p className="f_400 f_p mb_40 wow fadeInLeft" data-wow-delay="0.4s">Why I say old chap that is spiffing barney, nancy boy bleeder chimney pot Richard cheers the little rotter so I said, easy peasy buggered blower bevvy A bit of how's your father he nicked.!</p>}
                                 {p && <p className="f_400 f_p mb_40 wow fadeInLeft" data-wow-delay="0.4s">{p}</p>}
                                 {showButtons()}
                             </div>
@@ -65,3 +66,36 @@ const AppGetStarted = ({ title, subtitle, p, buttons, image }) => {
     )
 }
 export default AppGetStarted;
+
+AppGetStarted.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    p: PropTypes.string,
+    buttons: PropTypes.arrayOf(CallToActionButton),
+    image: PropTypes.objectOf(Image)
+}
+
+AppGetStarted.defaultProps = {
+    title: 'Download this app Now',
+    subtitle: `Dev'nTech`,
+    p: `Why I say old chap that is spiffing barney, nancy boy bleeder chimney pot Richard cheers the little rotter so I said, easy peasy buggered blower bevvy A bit of how's your father he nicked.`,
+    buttons: [
+        {
+            label: 'Google Play',
+            href: '/download-google-play',
+            image: {
+                src: '',
+                alt: ''
+            },
+        },
+        {
+            label: 'App Store',
+            href: '/download-app-store',
+            image: {
+                src: '',
+                alt: ''
+            },
+        },
+    ],
+    image: '/img/home7/iPhoneX2.png'
+}

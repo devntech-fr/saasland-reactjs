@@ -14,6 +14,18 @@ class AppTestimonial extends Component{
     }
     renderTestimonials() {
         const testimonials = this.props.testimonials;
+        if (undefined === testimonials) {
+            return (
+                <div className="app_testimonial_item text-center">
+                    <div className="author-img"><img src={`/img/home7/testimonial_author_img.png`} alt=""/></div>
+                    <div className="author_info">
+                        <h6 className="f_p f_500 f_size_18 t_color3 mb-0">{`Lurch Schpellchek`}</h6>
+                        <p>{`UI/UX designer`}</p>
+                    </div>
+                    <p className="f_400">{`What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, haggle young delinquent say so I said bite your arm off easy peasy. Skive off it's all gone to pot buggered.`}</p>
+                </div>
+            )
+        }
         if (testimonials.length <= 0) {
             return;
         }

@@ -3,6 +3,10 @@ import {themes} from "themes/ThemeContext";
 
 function NavigationWrapper({ children }) {
     const applyTheme = () => {
+        const className = themes['event'].header.children[0].navbar.className;
+        if (undefined !== className) {
+            return className;
+        }
         return 'menu_four';
     }
     return (

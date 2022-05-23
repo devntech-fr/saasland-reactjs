@@ -1,16 +1,37 @@
 import React from 'react';
-const ChatIntegration =()=>{
+
+function ChatIntegration({ title, p, integrations }) {
+    // const displayTitle = () => {
+    //     const span = title.split(' ')[0];
+    //     const title = title.substring(0,span.length);
+    //     console.log('span',span);
+    //     console.log('title',title);
+    //     return (
+    //         <h2>{title}</h2>
+    //     )
+    // }
     return(
         <section className="security_integration_area chat_integration_area">
             <div className="container">
                 <div className="border-bottom"></div>
                 <div className="chat_title text-center">
+                    {title}
                     <h2 className="wow fadeInUp"><span>Integrations.</span> Discover even more possibilities.</h2>
-                    <p>Explore 50+ integrations that make your day-to-day workflow more efficient and familiar. Our extensive developer tools might also strike your fancy.</p>
+                    <p>{p}</p>
                 </div>
             </div>
             <div className="container-fluid">
                 <div className="row">
+                    {
+                        integrations.map(({name, href, image}, key) => (
+                            <div className="col-lg-2 col-md-4 col-sm-6" key={key}>
+                                <a href={href} className="s_integration_item">
+                                    <img src={image} alt="" height={50}/>
+                                    {name && <h5>{name}</h5>}
+                                </a>
+                            </div>
+                        ))
+                    }
                     <div className="col-lg-2 col-md-4 col-sm-6">
                         <a href="/#" className="s_integration_item">
                             <img src={"../img/new-home/kissmetrics.png"} alt=""/>

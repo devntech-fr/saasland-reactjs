@@ -1,5 +1,4 @@
 import React from "react";
-import {ThemeContext, themes} from "themes/ThemeContext";
 
 function NavbarContainer({ children }) {
     const applyTheme = () => {

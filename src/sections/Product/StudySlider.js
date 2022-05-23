@@ -10,13 +10,13 @@ function StudySlider({ cases }) {
                     <div className="studies_item">
                         <img src={study.image} alt={study.title}/>
                         <div className="text">
-                            <a href=".#">
+                            <a href={`/projet/${study.slug}`}>
                                 <h4>{study.title}</h4>
                             </a>
                             {
                                 study.tags.map((tag, key) => (
                                     <span key={key}>
-                                        <a href={tag.href}>{tag.name}</a>
+                                        <a href={tag.href}>{tag.name}</a>&nbsp;
                                     </span>
                                 ))
                             }
@@ -24,7 +24,7 @@ function StudySlider({ cases }) {
                     </div>
                 </div>
             )
-        
+
         });
     }
     const settings = {

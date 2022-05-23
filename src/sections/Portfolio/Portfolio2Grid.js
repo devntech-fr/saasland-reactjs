@@ -67,7 +67,11 @@ class Portfolio2Grid extends Component{
             <section className="portfolio_area sec_pad bg_color">
                 <div className="container">
                     <div id="portfolio_filter" className="portfolio_filter mb_50">
-                        <div data-filter="*" className={`work_portfolio_item ${this.onActive('*')}`} onClick={() => {this.onFilterChange("*")}}>All</div>
+                        <div
+                            data-filter="*"
+                            className={`work_portfolio_item ${this.onActive('*')}`}
+                            onClick={() => {this.onFilterChange("*")}}
+                        >All</div>
                         {this.showFilters()}
                     </div>
                     <div className="row portfolio_gallery mb_30" id="work-portfolio">

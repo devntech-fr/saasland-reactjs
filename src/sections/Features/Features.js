@@ -8,6 +8,8 @@ import DesignTab from "sections/Features/DesignTab";
 import ErpFeatures from "sections/Features/ErpFeatures";
 import EventFeatures from "sections/Features/EventFeatures";
 import HostingPlan from "sections/Features/HostingPlan";
+import HostingFeatures from "sections/Features/HostingFeatures";
+import HostingFeaturesTwo from "sections/Features/HostingFeaturesTwo";
 import PaymentFeatures from "sections/Features/PaymentFeatures";
 import SecurityFeatures from "sections/Features/SecurityFeatures";
 import SecurityPowerFeatures from "sections/Features/SecurityPowerFeatures";
@@ -28,7 +30,9 @@ export default {
     design: DesignTab,
     erp: ErpFeatures,
     event: EventFeatures,
-    hosting: HostingPlan,
+    hosting: HostingFeatures,
+    hosting_two: HostingFeaturesTwo,
+    hosting_plan: HostingPlan,
     payment: PaymentFeatures,
     security: SecurityFeatures,
     securityPrice: SecurityPrice,

@@ -1,11 +1,11 @@
 export default {
-    name: 'marketing',
+    name: 'event',
     header: {
         name: 'default',
         children: [
             {
                 navbar: {
-                    className: 'menu_four',
+                    className: 'menu_four hosting_menu',
                     children: [
                         {
                             container: {

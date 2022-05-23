@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import NavbarLink, { NavbarLinkType } from "components/Header/NavbarLink";
+import MenuLink, { NavbarLinkType } from "components/Header/NavbarLink";
 import {useHistory, useRouteMatch} from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -13,7 +13,7 @@ function MainMenu({ navbarLinks }) {
 
     const showLinks = () => {
         return navbarLinks.map((link, key) => (
-            <NavbarLink label={link.label} href={link.href} isActive={routeMatch.path === link.href} index={key}/>
+            <MenuLink label={link.label} href={link.href} isActive={routeMatch.path === link.href} index={key}/>
         ))
     }
 

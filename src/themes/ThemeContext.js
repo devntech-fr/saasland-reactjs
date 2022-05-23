@@ -2,6 +2,7 @@ import React from "react";
 import Marketing from "themes/marketing";
 import Application from "themes/application";
 import Erp from "themes/erp";
+import Event from "themes/event";
 import Support from "themes/support";
 
 export const themes = {
@@ -10,7 +11,7 @@ export const themes = {
     chat: {},
     cloud: {},
     crm: {},
-    event: {},
+    event: Event,
     software: {},
     support: Support,
     tracking: {},

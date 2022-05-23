@@ -7,10 +7,10 @@ function LandingLayout({ children }) {
     return (
         <div className="body_wrapper">
             <OnePageMenu
-                slogo=""
-                mClass="menu_four"
-                nClass=""
-                hbtnClass=" menu_custfive"
+                logoClass=""
+                navbarClass="menu_four"
+                navListClass=""
+                ctaBtnClass="btn_get_radious menu_custfive"
             />
             {children}
             <FooterTwo FooterData={FooterData}/>

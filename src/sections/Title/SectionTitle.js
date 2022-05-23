@@ -3,7 +3,7 @@ import RichContent from "components/Content/RichContent";
 
 class SectionTitle extends RichContent {
     render(){
-        var {title, p, sClass, tClass} = this.props;
+        const {title, p, sClass, tClass} = this.props;
         console.log('title, p', title, p);
         return(
             <div className={`${sClass} ${tClass}`}>

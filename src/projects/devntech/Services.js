@@ -1,7 +1,9 @@
 import React from "react";
 import Layout from "projects/devntech/Layout";
 import Breadcrumb from "sections/Breadcrumb/Breadcrumb";
-import ChatFeatures from "sections/Features/ChatFeatures";
+import {SeoFeatures, SeoFeaturesReverse} from "sections/Features/SeoFeatures";
+import CloudServices from "sections/Service/CloudServices";
+import CloudServiceItem from "sections/Service/CloudServiceItem";
 
 function ServicesPage() {
     return (
@@ -10,128 +12,122 @@ function ServicesPage() {
                 title="Tous nos services"
                 description="Notre objectif est de rendre votre solution autonome et toujours prête à évoluer."
             />
-            <ChatFeatures
-                reverse={true}
-                pClass="pr_70"
-                col1="col-lg-6 offset-lg-1"
-                col2="col-lg-5"
-                icon="/img/services/rest_api.png"
-                parallaxImages={[
+            <CloudServices title={`Une approche <br/>centrée sur l'open-source`}>
+                <CloudServiceItem
+                    title={`Développement back-end`}
+                    buttonLink={{
+                        label: "Découvrir",
+                        href: '/developpement-backend'
+                    }}
+                />
+                <CloudServiceItem
+                    image={{
+                        src: '/img/home5/icon2.png'
+                    }}
+                    shape
+                    title="Développement front-end"
+                    p="Crikey blow off chap knackered gosh bobby geeza gormless well, Charles cheeky bugger I cor blimey guvnor hanky panky jolly good."
+                    buttonLink={{
+                        label: "Découvrir",
+                        href: "/#"
+                    }}
+                />
+                <CloudServiceItem
+                    image={{
+                        src: '/img/home5/icon3.png'
+                    }}
+                    shape
+                    title="Intégration API tierce"
+                    p="Crikey blow off chap knackered gosh bobby geeza gormless well, Charles cheeky bugger I cor blimey guvnor hanky panky jolly good."
+                    buttonLink={{
+                        label: "Learn More",
+                        href: "/#"
+                    }}
+                />
+                <CloudServiceItem
+                    image={{
+                        src: '/img/home5/icon3.png'
+                    }}
+                    shape
+                    title="Refonte technique"
+                    p="Crikey blow off chap knackered gosh bobby geeza gormless well, Charles cheeky bugger I cor blimey guvnor hanky panky jolly good."
+                    buttonLink={{
+                        label: "Learn More",
+                        href: "/#"
+                    }}
+                />
+                <CloudServiceItem
+                    image={{
+                        src: '/img/home5/icon3.png'
+                    }}
+                    shape
+                    title="Migration technique"
+                    p="Crikey blow off chap knackered gosh bobby geeza gormless well, Charles cheeky bugger I cor blimey guvnor hanky panky jolly good."
+                    buttonLink={{
+                        label: "Learn More",
+                        href: "/#"
+                    }}
+                />
+                <CloudServiceItem
+                    image={{
+                        src: '/img/home5/icon3.png'
+                    }}
+                    shape
+                    title="Suivi technique"
+                    p="Crikey blow off chap knackered gosh bobby geeza gormless well, Charles cheeky bugger I cor blimey guvnor hanky panky jolly good."
+                    buttonLink={{
+                        label: "Learn More",
+                        href: "/#"
+                    }}
+                />
+            </CloudServices>
+            <SeoFeatures
+                title={`Développement d'API REST`}
+                p={`En plus de vous servir de back-end pour administrer vos données, l'API vous permet de rendre vos services accessibles depuis tout ordinateur, smartphone ou objet connecté et de décupler le potentiel de votre business.`}
+                features={[
                     {
-                        src: '/img/home-chat/dot.png',
-                        classNames: 'p_absolute dot_bg',
-                        alt: 'dots',
-                        parallax: {}
-                    },
-                    // {
-                    //     src: '/img/home-chat/chat_02.png',
-                    //     classNames: 'chat_one',
-                    //     alt: 'api rest',
-                    //     parallax: {
-                    //         x: 0,
-                    //         y: 80
-                    //     }
-                    // },
-                    {
-                        src: '/img/services/swagger_api_doc.png',
-                        classNames: 'p_absolute chat_two',
-                        alt: 'rest_api',
-                        parallax: {
-                            x: 0,
-                            y: 80
-                        }
-                    },
-                ]}
-                boldtitle="API & backend"
-                title="développement"
-                p="Décuplez votre potentiel d'intéraction avec les API REST synchrones ou asynchrones."
-                url="#"
-            />
-            <ChatFeatures
-                pClass="pr_70"
-                col1="col-lg-6 offset-lg-1"
-                col2="col-lg-5"
-                icon="/img/services/app_mobile.png"
-                parallaxImages={[
-                    {
-                        src: '/img/services/webapp.webp',
-                        classNames: 'p_absolute dot_bg',
-                        alt: 'dots',
-                        parallax: {}
-                    },
-                    // {
-                    //     src: '/img/services/webapp.webp',
-                    //     classNames: 'chat_one',
-                    //     alt: 'api rest',
-                    //     parallax: {
-                    //         x: -50,
-                    //         y: 0
-                    //     }
-                    // },
-                    // {
-                    //     src: '/img/home-chat/chat_01.png',
-                    //     classNames: 'p_absolute chat_two',
-                    //     alt: 'rest_api',
-                    //     parallax: {
-                    //         x: 0,
-                    //         y: -80
-                    //     }
-                    // },
-                ]}
-                boldtitle="Applications web & mobile"
-                title="développement"
-                p="Single Page Application ou application multiplateforme."
-                url="#"
-            />
-            <ChatFeatures
-                reverse={true}
-                pClass="pr_70"
-                col1="col-lg-6 offset-lg-1"
-                col2="col-lg-5"
-                icon="/img/services/help.png"
-                parallaxImages={[
-                    {
-                        src: '/img/home-chat/dot.png',
-                        classNames: 'p_absolute dot_bg',
-                        alt: 'dots',
-                        parallax: {}
+                        title: 'Scalable',
+                        image: '/img/seo/icon4.png',
+                        description: `Notre hébergement s'adapte à vos utilisateurs finaux.`
                     },
                     {
-                        src: '/img/home-chat/chat_02.png',
-                        classNames: 'chat_one',
-                        alt: 'api rest',
-                        parallax: {
-                            x: 0,
-                            y: 80
-                        }
+                        title: 'Sécurisé',
+                        image: '/img/seo/icon3.png',
+                        description: `Notre hébergement s'adapte à vos utilisateurs finaux.`
                     },
                     {
-                        src: '/img/home-chat/chat_01.png',
-                        classNames: 'p_absolute chat_two',
-                        alt: 'rest_api',
-                        parallax: {
-                            x: 0,
-                            y: -80
-                        }
+                        title: 'Performant',
+                        image: '/img/seo/icon4.png',
+                        description: `Notre hébergement s'adapte à vos utilisateurs finaux.`
                     },
                 ]}
-                boldtitle="Maintenance et suivi"
-                title="maintenance et suivi"
-                p="Suivi santé, mises à jour de sécurité et des dépendances, backups réguliers."
-                url="#"
+                image={'/img/services/swagger_api_doc.png'}
             />
-            <ChatFeatures
-                pClass="pr_70"
-                col1="col-lg-6 offset-lg-1"
-                col2="col-lg-5"
-                icon="chat_icon.png"
-                img1="dot.png"
-                img2="chat_02.png"
-                img3="chat_01.png"
-                boldtitle="Site vitrine WordPress"
-                title="avec Elementor"
-                p="Création de votre site, intégration de votre contenu, déploiement sur serveur et optimisation du site pour le référencement."
-                url="#"
+            <SeoFeaturesReverse
+                title={`Commandez votre API dès maintenant.`}
+                p={`En tant qu'association vous bénéficiez d'une réduction automatique de 20%.`}
+                button={{
+                    href: '/commande/api',
+                    label: 'Commander mon API'
+                }}
+                features={[
+                    {
+                        title: 'Scalable',
+                        image: '/img/seo/icon4.png',
+                        description: `Notre hébergement s'adapte à vos utilisateurs finaux.`
+                    },
+                    {
+                        title: 'Sécurisé',
+                        image: '/img/seo/icon3.png',
+                        description: `Notre hébergement s'adapte à vos utilisateurs finaux.`
+                    },
+                    {
+                        title: 'Performant',
+                        image: '/img/seo/icon4.png',
+                        description: `Notre hébergement s'adapte à vos utilisateurs finaux.`
+                    },
+                ]}
+                image={'/img/services/webapp.webp'}
             />
         </Layout>
     )

@@ -2,6 +2,9 @@ import React from 'react';
 import RichContent from "components/Content/RichContent";
 import Reveal from "react-reveal"
 import AppFeaturedItem from "components/Feature/AppFeaturedItem";
+import PropTypes from "prop-types";
+import CallToActionButton from "types/CallToActionButton";
+import OnePageMenu from "components/Navbar/OnePageMenu";
 
 class ParallaxSetting {
     start = 700;
@@ -22,7 +25,7 @@ class AppFeaturesTwo extends RichContent {
                 <div className="container">
                     <div className="row flex-row-reverse app_feature_info">
                         <div className="col-lg-6">
-                            {children}
+                            <div className="app_fetured_item">{children}</div>
                         </div>
                         <div className="col-lg-6">
                           <Reveal bottom cascade>
@@ -43,3 +46,9 @@ class AppFeaturesTwo extends RichContent {
     }
 }
 export default AppFeaturesTwo;
+
+AppFeaturesTwo.propTypes = {
+    title: PropTypes.string.isRequired,
+    p: PropTypes.string.isRequired,
+    features: PropTypes.arrayOf(AppFeaturedItem)
+}

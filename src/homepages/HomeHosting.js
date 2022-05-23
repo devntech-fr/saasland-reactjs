@@ -2,14 +2,14 @@ import React from 'react';
 import HostingBanner from 'sections/Banner/HostingBanner';
 import DomainSearch from 'sections/Search/DomainSearch';
 import HostingService from 'sections/Service/HostingService';
-import HostingFeatures from 'sections/Service/HostingFeatures';
+import HostingFeatures from 'sections/Features/HostingFeatures';
 import HostingAction from 'sections/CallToAction/HostingAction';
 import HostingPlan from 'sections/Features/HostingPlan';
 import HostingMap from 'sections/Map/HostingMap';
 import HostingBlog from 'sections/Blog/HostingBlog';
 import HostingActionTwo from 'sections/CallToAction/HostingActionTwo';
 import Layout from "layouts/Layout";
-import HostingFeatureItem from "sections/Service/HostingFeatureItem";
+import HostingFeatureItem from "sections/Features/HostingFeatureItem";
 import HostingBlogItems from "sections/Blog/HostingBlogItems";
 
 const HomeHosting =()=> {

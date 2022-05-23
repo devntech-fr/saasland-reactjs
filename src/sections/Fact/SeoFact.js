@@ -1,7 +1,7 @@
 import React from "react";
 import SeoTitle from "sections/Title/SeoTitle";
 
-function SeoFact({ facts }) {
+function SeoFact({ title, facts }) {
     const renderFacts = () => {
         return facts.map((fact, key) => {
             console.log('fact',fact);
@@ -25,7 +25,7 @@ function SeoFact({ facts }) {
                 <div className="triangle b_eight" data-parallax='{"x": 120, "y": -10}'><img src="img/seo/triangle_one.png" alt=""/></div>
             </div>
             <div className="container">
-                <SeoTitle title='Over 1200+ completed work & Still counting.'/>
+                <SeoTitle title={title} />
                 <div className="seo_fact_info">
                     {renderFacts()}
                 </div>

@@ -2,7 +2,6 @@ import AppWork from "sections/Service/AppWork";
 import CloudServices from "sections/Service/CloudServices";
 import DarkSoftwareService from "sections/Service/DarkSoftwareService";
 import ErpService from "sections/Service/ErpService";
-import HostingFeatures from "sections/Service/HostingFeatures";
 import HostingService from "sections/Service/HostingService";
 import HRServices from "sections/Service/HRServices";
 import MarketingService from "sections/Service/MarketingService";
@@ -16,8 +15,7 @@ export default {
     cloud: CloudServices,
     software: DarkSoftwareService,
     erp: ErpService,
-    hosting: HostingFeatures,
-    hostingService: HostingService,
+    hosting: HostingService,
     hr: HRServices,
     marketing: MarketingService,
     payment: PaymentService,
