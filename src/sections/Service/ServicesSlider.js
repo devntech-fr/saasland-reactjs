@@ -1,17 +1,6 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick'
-
-const ServiceSliderItem = (props) => {
-    const { iconClassName, title, p, imageURL } = props.item;
-    return (
-        <div className="service_item" key={props.key}>
-            <div className="icon s_icon_one"><i className={iconClassName}></i></div>
-            <h4 className="f_600 f_size_20 l_height28 t_color2 mb_20">{title}</h4>
-            <p>{p}</p>
-            <img className="float-right" src={imageURL} alt=""/>
-        </div>
-    )
-}
+import ServiceSliderItem from "sections/Service/Single/ServiceSliderItem";
 
 class ServiceSlider extends Component {
     render(){
@@ -56,11 +45,42 @@ class ServiceSlider extends Component {
                 }
               ]
         };
-        const arrayItems = this.props.items;
+        const arrayItems = [
+            {
+                id: 1,
+                icon: 'ti-check',
+                title: `Mail Metrics<br/> Receive`,
+                p: `Brolly off his nut A bit of how's your father chancer in my flat chinwag bog skive.`,
+                image: {
+                    src: '/img/home2/undraw.png',
+                    alt: 'undraw'
+                }
+            },
+            {
+                id: 2,
+                icon: 'ti-check',
+                title: `Mail Metrics<br/> Receive`,
+                p: `Brolly off his nut A bit of how's your father chancer in my flat chinwag bog skive.`,
+                image: {
+                    src: '/img/home2/undraw.png',
+                    alt: 'undraw'
+                }
+            },
+            {
+                id: 3,
+                icon: 'ti-check',
+                title: `Mail Metrics<br/> Receive`,
+                p: `Brolly off his nut A bit of how's your father chancer in my flat chinwag bog skive.`,
+                image: {
+                    src: '/img/home2/undraw.png',
+                    alt: 'undraw'
+                }
+            },
+        ];
         return(
             <Slider className="service_carousel" {...settings}>
                 {arrayItems.length > 0 && arrayItems.map((item, key) => (
-                    <ServiceSliderItem item key={key}/>
+                    <ServiceSliderItem {...item} key={key}/>
                 ))}
                 {
                     !arrayItems.length &&

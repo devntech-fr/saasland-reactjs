@@ -1,5 +1,5 @@
 import React from 'react';
-import StartupServiceItem from 'sections/Service/Sservice/StartupServiceItem';
+import StartupServiceItem from 'sections/Service/Single/StartupServiceItem';
 import Reveal from 'react-reveal';
 import RichContent from "components/Content/RichContent";
 

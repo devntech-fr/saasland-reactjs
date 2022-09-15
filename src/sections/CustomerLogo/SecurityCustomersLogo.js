@@ -1,6 +1,7 @@
 import React from 'react';
 import { displayTitle } from "components/Content/RichContent";
 import AnalyticCustomerLogo from "components/Security/AnalyticCustomerLogo";
+import {Link} from "react-router-dom";
 
 const SecurityCustomerLogo =({ title, p, imagesDecoration, logoCollection, buttons })=>{
     return(
@@ -23,35 +24,18 @@ const SecurityCustomerLogo =({ title, p, imagesDecoration, logoCollection, butto
                                 <AnalyticCustomerLogo href={logo.href} image={logo.image}/>
                             </div>
                         ))}
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp"><img src={"/img/home-software/logo_01.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp" data-wow-delay="0.2s"><img src={"/img/home-software/logo_02.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp" data-wow-delay="0.4s"><img src={"/img/home-software/logo_03.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp" data-wow-delay="0.6s"><img src={"/img/home-software/logo_04.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp"><img src={"/img/home-software/logo_05.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp" data-wow-delay="0.2s"><img src={"/img/home-software/logo_06.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp" data-wow-delay="0.4s"><img src={"/img/home-software/logo_07.png"} alt=""/></a>
-                        </div>
-                        <div className="col-lg-3 col-sm-4 col-6">
-                            <a href="/#" className="analytices_logo wow fadeInUp" data-wow-delay="0.6s"><img src={"/img/home-software/logo_08.png"} alt=""/></a>
-                        </div>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <a href="/#" className="security_app_btn wow fadeInLeft"><i className="fab fa-windows"></i>Compatible with <span>Windows 10, 8, 7</span></a>
-                    <a href="/#" className="security_app_btn wow fadeInRight"><i className="fab fa-apple"></i>Compatible with <span>Mac OS</span></a>
+                    {
+                        buttons.map((button, key) => (
+                            <Link to={button.href} key={key}>
+                                <a className={button.classNames}><i className={button.iconClass}></i>{button.label}</a>
+                            </Link>
+                        ))
+                    }
+                    {/*<a href="/#" className="security_app_btn wow fadeInLeft"><i className="fab fa-windows"></i>Compatible with <span>Windows 10, 8, 7</span></a>*/}
+                    {/*<a href="/#" className="security_app_btn wow fadeInRight"><i className="fab fa-apple"></i>Compatible with <span>Mac OS</span></a>*/}
                 </div>
             </div>
         </section>
